@@ -47,6 +47,6 @@ const shoesSchema = new mongoose.Schema({
 	// images: [String],
 });
 
-const Shoes = mongoose.model('Shoes', shoesSchema);
+const Shoes = mongoose.model('Shoes', shoesSchema, 'shoes');
 
 module.exports = Shoes;

@@ -1,18 +1,21 @@
 /** @format */
 
-const Shoes = require('./../controllers/shoesController');
+const Shoes = require('./../models/shoesModel');
 
 module.exports.getAllShoes = async (req, res, next) => {
 	try {
-		const shoes = await Shoes.find();
+		const shoes = await Shoes.find({});
 		res.status(200).json({
-			shoes: shoes.length,
-			message: success,
+			status: 'success',
+			shoes: {
+				length: shoes.length,
+				shoes,
+			},
 		});
-		console.log(shoes.length);
 	} catch (err) {
 		res.status(404).json({
-			message: fail,
+			status: 'error',
+			message: err,
 		});
 	}
 
