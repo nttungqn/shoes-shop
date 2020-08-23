@@ -1,0 +1,333 @@
+doctype html
+//
+    author: W3layouts
+    author URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
+head
+    title
+        | Downy Shoes an Ecommerce Category Bootstrap Responsive Website Template | Contact :: w3layouts
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+    meta(name='keywords' content='Downy Shoes Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, \
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+        addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+        window.scrollTo(0, 1);
+        }
+    // //custom-theme
+    link(href='css/bootstrap.css' rel='stylesheet' type='text/css' media='all')
+    link(rel='stylesheet' href='css/shop.css' type='text/css' media='screen' property='')
+    link(href='css/style7.css' rel='stylesheet' type='text/css' media='all')
+    // Owl-carousel-CSS
+    link(rel='stylesheet' type='text/css' href='css/contact.css')
+    link(href='css/style.css' rel='stylesheet' type='text/css' media='all')
+    // font-awesome-icons
+    link(href='css/font-awesome.css' rel='stylesheet')
+    // //font-awesome-icons
+    link(href='//fonts.googleapis.com/css?family=Montserrat:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800' rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800' rel='stylesheet')
+// banner
+#home.banner_top.innerpage
+    .wrapper_top_w3layouts
+        .header_agileits
+            .logo.inner_page_log
+                h1
+                    a.navbar-brand(href='index.html')
+                        span Downy
+                        i Shoes
+            .overlay.overlay-contentpush
+                button.overlay-close(type='button')
+                    i.fa.fa-times(aria-hidden='true')
+                nav
+                    ul
+                        li
+                            a.active(href='index.html') Home
+                        li
+                            a(href='about.html') About
+                        li
+                            a(href='404.html') Team
+                        li
+                            a(href='shop.html') Shop Now
+                        li
+                            a(href='contact.html') Contact
+            .mobile-nav-button
+                button#trigger-overlay(type='button')
+                    i.fa.fa-bars(aria-hidden='true')
+            // cart details
+            .top_nav_right
+                .shoecart.shoecart2.cart.cart.box_1
+                    form.last(action='#' method='post')
+                        input(type='hidden' name='cmd' value='_cart')
+                        input(type='hidden' name='display' value='1')
+                        button.top_shoe_cart(type='submit' name='submit' value='')
+                            i.fa.fa-cart-arrow-down(aria-hidden='true')
+    // //cart details
+    // search
+    .search_w3ls_agileinfo
+        .cd-main-header
+            ul.cd-header-buttons
+                li
+                    a.cd-search-trigger(href='#cd-search')
+                        span
+        #cd-search.cd-search
+            form(action='#' method='post')
+                input(name='Search' type='search' placeholder='Click enter after typing...')
+    // //search
+    .clearfix
+    // /banner_inner
+    .services-breadcrumb_w3ls_agileinfo
+        .inner_breadcrumb_agileits_w3
+            ul.short
+                li
+                    a(href='index.html') Home
+                    i |
+                li Contact
+    // //banner_inner
+// //banner
+// top Products
+.ads-grid_shop
+    .shop_inner_inf
+        h3.head Contact Us
+        p.head_para Add Some Description
+        .inner_section_w3ls
+            .col-md-7.contact_grid_right
+                h6 Please fill this form to contact with us.
+                form(action='#' method='post')
+                    .col-md-6.col-sm-6.contact_left_grid
+                        input(type='text' name='Name' placeholder='Name' required='')
+                        input(type='email' name='Email' placeholder='Email' required='')
+                    .col-md-6.col-sm-6.contact_left_grid
+                        input(type='text' name='Telephone' placeholder='Telephone' required='')
+                        input(type='text' name='Subject' placeholder='Subject' required='')
+                    .clearfix  
+                    textarea(name='Message' onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required='') Message...
+                    input(type='submit' value='Submit')
+                    input(type='reset' value='Clear')
+            .col-md-5.contact-left
+                h6 Contact Info
+                .visit
+                    .col-md-2.col-sm-2.col-xs-2.contact-icon
+                        span.fa.fa-home(aria-hidden='true')
+                    .col-md-10.col-sm-10.col-xs-10.contact-text
+                        h4 Visit us
+                        p Parma Via Modena,BO, Italy
+                    .clearfix
+                .mail-us
+                    .col-md-2.col-sm-2.col-xs-2.contact-icon
+                        span.fa.fa-envelope(aria-hidden='true')
+                    .col-md-10.col-sm-10.col-xs-10.contact-text
+                        h4 Mail us
+                        p
+                            a(href='mailto:info@example.com') info@example.com
+                    .clearfix
+                .call
+                    .col-md-2.col-sm-2.col-xs-2.contact-icon
+                        span.fa.fa-phone(aria-hidden='true')
+                    .col-md-10.col-sm-10.col-xs-10.contact-text
+                        h4 Call us
+                        p +18044261149
+                    .clearfix
+                .visit
+                    .col-md-2.col-sm-2.col-xs-2.contact-icon
+                        span.fa.fa-fax(aria-hidden='true')
+                    .col-md-10.col-sm-10.col-xs-10.contact-text
+                        h4 Fax
+                        p +1804426349
+                    .clearfix
+            .clearfix  
+        .clearfix
+.contact-map
+    iframe.map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783' style='border:0' allowfullscreen='')
+// /newsletter
+.newsletter_w3layouts_agile
+    .col-sm-6.newsleft
+        h3 Sign up for Newsletter !
+    .col-sm-6.newsright
+        form(action='#' method='post')
+            input(type='email' placeholder='Enter your email...' name='email' required='')
+            input(type='submit' value='Submit')
+    .clearfix
+// //newsletter
+// footer
+.footer_agileinfo_w3
+    .footer_inner_info_w3ls_agileits
+        .col-md-3.footer-left
+            h2
+                a(href='index.html')
+                    span D
+                    | owny Shoes
+            p
+                | Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+            ul.social-nav.model-3d-0.footer-social.social.two
+                li
+                    a.facebook(href='#')
+                        .front
+                            i.fa.fa-facebook(aria-hidden='true')
+                        .back
+                            i.fa.fa-facebook(aria-hidden='true')
+                li
+                    a.twitter(href='#')
+                        .front
+                            i.fa.fa-twitter(aria-hidden='true')
+                        .back
+                            i.fa.fa-twitter(aria-hidden='true')
+                li
+                    a.instagram(href='#')
+                        .front
+                            i.fa.fa-instagram(aria-hidden='true')
+                        .back
+                            i.fa.fa-instagram(aria-hidden='true')
+                li
+                    a.pinterest(href='#')
+                        .front
+                            i.fa.fa-linkedin(aria-hidden='true')
+                        .back
+                            i.fa.fa-linkedin(aria-hidden='true')
+        .col-md-9.footer-right
+            .sign-grds
+                .col-md-4.sign-gd
+                    h4
+                        | Our 
+                        span Information
+                    ul
+                        li
+                            a(href='index.html') Home
+                        li
+                            a(href='about.html') About
+                        li
+                            a(href='404.html') Services
+                        li
+                            a(href='404.html') Short Codes
+                        li
+                            a(href='contact.html') Contact
+                .col-md-5.sign-gd-two
+                    h4
+                        | Store 
+                        span Information
+                    .address
+                        .address-grid
+                            .address-left
+                                i.fa.fa-phone(aria-hidden='true')
+                            .address-right
+                                h6 Phone Number
+                                p +1 234 567 8901
+                            .clearfix  
+                        .address-grid
+                            .address-left
+                                i.fa.fa-envelope(aria-hidden='true')
+                            .address-right
+                                h6 Email Address
+                                p
+                                    | Email :
+                                    a(href='mailto:example@email.com')  mail@example.com
+                            .clearfix  
+                        .address-grid
+                            .address-left
+                                i.fa.fa-map-marker(aria-hidden='true')
+                            .address-right
+                                h6 Location
+                                p
+                                    | Broome St, NY 10002,California, USA.
+                            .clearfix  
+                .col-md-3.sign-gd.flickr-post
+                    h4
+                        | Flickr 
+                        span Posts
+                    ul
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t1.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t2.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t3.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t4.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t1.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t2.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t3.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t2.jpg' alt=' ')
+                        li
+                            a(href='single.html')
+                                img.img-responsive(src='images/t4.jpg' alt=' ')
+                .clearfix
+        .clearfix
+        p.copy-right-w3ls-agileits
+            | &amp;copy 2018 Downy Shoes. All rights reserved | Design by 
+            a(href='http://w3layouts.com/') w3layouts
+// //footer
+// js
+script(type='text/javascript' src='js/jquery-2.1.4.min.js')
+// //js
+// cart-js
+script(src='js/minicart.js')
+script.
+    shoe.render();
+    shoe.cart.on('shoe_checkout', function (evt) {
+    var items, len, i;
+    if (this.subtotal() > 0) {
+    items = this.items();
+    for (i = 0, len = items.length; i < len; i++) {}
+    }
+    });
+// //cart-js
+// /nav
+script(src='js/modernizr-2.6.2.min.js')
+script(src='js/classie.js')
+script(src='js/demo1.js')
+// //nav
+// script for responsive tabs
+script(src='js/easy-responsive-tabs.js')
+script.
+    $(document).ready(function () {
+    $('#horizontalTab').easyResponsiveTabs({
+    type: 'default', //Types: default, vertical, accordion
+    width: 'auto', //auto or any width like 600px
+    fit: true, // 100% fit in a container
+    closed: 'accordion', // Start closed if in accordion view
+    activate: function (event) { // Callback function if tab is switched
+    var $tab = $(this);
+    var $info = $('#tabInfo');
+    var $name = $('span', $info);
+    $name.text($tab.text());
+    $info.show();
+    }
+    });
+    $('#verticalTab').easyResponsiveTabs({
+    type: 'vertical',
+    width: 'auto',
+    fit: true
+    });
+    });
+// search-bar
+script(src='js/search.js')
+// //search-bar
+// start-smoth-scrolling
+script(type='text/javascript' src='js/move-top.js')
+script(type='text/javascript' src='js/easing.js')
+script(type='text/javascript').
+    jQuery(document).ready(function ($) {
+    $(".scroll").click(function (event) {
+    event.preventDefault();
+    $('html,body').animate({
+    scrollTop: $(this.hash).offset().top
+    }, 1000);
+    });
+    });
+// //end-smoth-scrolling
+script(type='text/javascript' src='js/bootstrap-3.1.1.min.js')
