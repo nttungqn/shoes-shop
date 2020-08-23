@@ -1,23 +1,14 @@
 /** @format */
 
 const User = require('./../models/userModel');
+const factoryHandler = require('./FactoryHandler');
 
-module.exports.getAllUsers = async (req, res, next) => {
-	try {
-		const users = await User.find({});
-		res.status(200).json({
-			status: 'success',
-			users: {
-				length: users.length,
-				users,
-			},
-		});
-	} catch (err) {
-		res.status(404).json({
-			status: 'error',
-			message: err,
-		});
-	}
+module.exports.getAllUsers = factoryHandler.getAll(User);
 
-	next();
-};
+module.exports.createUser = factoryHandler.createOne(User);
+
+module.exports.getUser = factoryHandler.getOne(User);
+
+module.exports.updateUser = factoryHandler.updateOne(User);
+
+module.exports.deleteUser = factoryHandler.deleteOne(User);

@@ -1,23 +1,14 @@
 /** @format */
 
 const Shoes = require('./../models/shoesModel');
+const factoryHandler = require('./../controllers/FactoryHandler');
 
-module.exports.getAllShoes = async (req, res, next) => {
-	try {
-		const shoes = await Shoes.find({});
-		res.status(200).json({
-			status: 'success',
-			shoes: {
-				length: shoes.length,
-				shoes,
-			},
-		});
-	} catch (err) {
-		res.status(404).json({
-			status: 'error',
-			message: err,
-		});
-	}
+module.exports.getAllShoes = factoryHandler.getAll(Shoes);
 
-	next();
-};
+module.exports.createShoes = factoryHandler.createOne(Shoes);
+
+module.exports.getShoes = factoryHandler.getOne(Shoes);
+
+module.exports.updateShoes = factoryHandler.updateOne(Shoes);
+
+module.exports.deleteShoes = factoryHandler.deleteOne(Shoes);
