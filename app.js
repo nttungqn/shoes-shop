@@ -16,4 +16,8 @@ app.use(bodyParser.json());
 app.use('/api/shoes/', shoesRouter);
 app.use('/api/users/', userRouter);
 
+app.all('*', (req, res, next) => {
+	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+});
+
 module.exports = app;
