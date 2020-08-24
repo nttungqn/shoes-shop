@@ -1,0 +1,63 @@
+
+// Start Header Area
+header.header_area.sticky-header
+    .main_menu
+        nav.navbar.navbar-expand-lg.navbar-light.main_box
+            .container
+                // Brand and toggle get grouped for better mobile display
+                a.navbar-brand.logo_h(href='index.html')
+                    img(src='img/logo.png' alt='')
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                // Collect the nav links, forms, and other content for toggling
+                #navbarSupportedContent.collapse.navbar-collapse.offset
+                    ul.nav.navbar-nav.menu_nav.ml-auto
+                        li.nav-item.active
+                            a.nav-link(href='index.html') Home
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Shop
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='category.html') Shop Category
+                                li.nav-item
+                                    a.nav-link(href='single-product.html') Product Details
+                                li.nav-item
+                                    a.nav-link(href='checkout.html') Product Checkout
+                                li.nav-item
+                                    a.nav-link(href='cart.html') Shopping Cart
+                                li.nav-item
+                                    a.nav-link(href='confirmation.html') Confirmation
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Blog
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='blog.html') Blog
+                                li.nav-item
+                                    a.nav-link(href='single-blog.html') Blog Details
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Pages
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='login.html') Login
+                                li.nav-item
+                                    a.nav-link(href='tracking.html') Tracking
+                                li.nav-item
+                                    a.nav-link(href='elements.html') Elements
+                        li.nav-item
+                            a.nav-link(href='contact.html') Contact
+                    ul.nav.navbar-nav.navbar-right
+                        li.nav-item
+                            a.cart(href='#')
+                                span.ti-bag
+                        li.nav-item
+                            button.search
+                                span#search.lnr.lnr-magnifier
+    #search_input_box.search_input
+        .container
+            form.d-flex.justify-content-between
+                input#search_input.form-control(type='text' placeholder='Search Here')
+                button.btn(type='submit')
+                span#close_search.lnr.lnr-cross(title='Close Search')
+// End Header Area
