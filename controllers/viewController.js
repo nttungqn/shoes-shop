@@ -11,3 +11,15 @@ module.exports.getOverview = catchAsync(async (req, res, next) => {
 		title: 'Overview',
 	});
 });
+
+module.exports.getShopCategory = catchAsync(async (req, res, next) => {
+	res.status(200).render('category', {
+		title: 'Shop Category',
+	});
+});
+
+module.exports.getDetailProduct = catchAsync(async (req, res, next) => {
+	res.status(200).render('single-product', {
+		title: 'Detail Product',
+	});
+});

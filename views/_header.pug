@@ -1,11 +1,10 @@
-
 // Start Header Area
 header.header_area.sticky-header
     .main_menu
         nav.navbar.navbar-expand-lg.navbar-light.main_box
             .container
                 // Brand and toggle get grouped for better mobile display
-                a.navbar-brand.logo_h(href='index.html')
+                a.navbar-brand.logo_h(href='/')
                     img(src='img/logo.png' alt='')
                 button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
                     span.icon-bar
@@ -15,42 +14,44 @@ header.header_area.sticky-header
                 #navbarSupportedContent.collapse.navbar-collapse.offset
                     ul.nav.navbar-nav.menu_nav.ml-auto
                         li.nav-item.active
-                            a.nav-link(href='index.html') Home
+                            a.nav-link(href='/') Home
                         li.nav-item.submenu.dropdown
                             a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Shop
                             ul.dropdown-menu
                                 li.nav-item
-                                    a.nav-link(href='category.html') Shop Category
+                                    a.nav-link(href='category') Shop Category
                                 li.nav-item
-                                    a.nav-link(href='single-product.html') Product Details
+                                    a.nav-link(href='single-product') Product Details
                                 li.nav-item
-                                    a.nav-link(href='checkout.html') Product Checkout
+                                    a.nav-link(href='checkout') Product Checkout
                                 li.nav-item
-                                    a.nav-link(href='cart.html') Shopping Cart
+                                    a.nav-link(href='cart') Shopping Cart
                                 li.nav-item
-                                    a.nav-link(href='confirmation.html') Confirmation
+                                    a.nav-link(href='confirmation') Confirmation
                         li.nav-item.submenu.dropdown
                             a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Blog
                             ul.dropdown-menu
                                 li.nav-item
-                                    a.nav-link(href='blog.html') Blog
+                                    a.nav-link(href='blog') Blog
                                 li.nav-item
-                                    a.nav-link(href='single-blog.html') Blog Details
+                                    a.nav-link(href='single-blog') Blog Details
                         li.nav-item.submenu.dropdown
                             a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Pages
                             ul.dropdown-menu
                                 li.nav-item
-                                    a.nav-link(href='login.html') Login
+                                    a.nav-link(href='tracking') Tracking
                                 li.nav-item
-                                    a.nav-link(href='tracking.html') Tracking
-                                li.nav-item
-                                    a.nav-link(href='elements.html') Elements
+                                    a.nav-link(href='elements') Elements
                         li.nav-item
-                            a.nav-link(href='contact.html') Contact
+                            a.nav-link(href='contact') Contact
+                        if !user
+                            li.nav-item
+                                a.nav-link(href='login') Login
                     ul.nav.navbar-nav.navbar-right
-                        li.nav-item
-                            a.cart(href='#')
-                                span.ti-bag
+                        if user
+                            li.nav-item
+                                a.cart(href='#')
+                                    span.ti-bag
                         li.nav-item
                             button.search
                                 span#search.lnr.lnr-magnifier
