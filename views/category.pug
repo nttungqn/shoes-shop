@@ -1,0 +1,884 @@
+doctype html
+head
+	// Mobile Specific Meta
+	meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+	// Favicon
+	link(rel='shortcut icon' href='img/fav.png')
+	// Author Meta
+	meta(name='author' content='CodePixar')
+	// Meta Description
+	meta(name='description' content='')
+	// Meta Keyword
+	meta(name='keywords' content='')
+	// meta character set
+	meta(charset='UTF-8')
+	// Site Title
+	title Karma Shop
+	//
+		CSS
+		=============================================
+	link(rel='stylesheet' href='css/linearicons.css')
+	link(rel='stylesheet' href='css/owl.carousel.css')
+	link(rel='stylesheet' href='css/font-awesome.min.css')
+	link(rel='stylesheet' href='css/themify-icons.css')
+	link(rel='stylesheet' href='css/nice-select.css')
+	link(rel='stylesheet' href='css/nouislider.min.css')
+	link(rel='stylesheet' href='css/bootstrap.css')
+	link(rel='stylesheet' href='css/main.css')
+// Start Header Area
+header.header_area.sticky-header
+	.main_menu
+		nav.navbar.navbar-expand-lg.navbar-light.main_box
+			.container
+				// Brand and toggle get grouped for better mobile display
+				a.navbar-brand.logo_h(href='index.html')
+					img(src='img/logo.png' alt='')
+				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				// Collect the nav links, forms, and other content for toggling
+				#navbarSupportedContent.collapse.navbar-collapse.offset
+					ul.nav.navbar-nav.menu_nav.ml-auto
+						li.nav-item
+							a.nav-link(href='index.html') Home
+						li.nav-item.submenu.dropdown.active
+							a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Shop
+							ul.dropdown-menu
+								li.nav-item.active
+									a.nav-link(href='category.html') Shop Category
+								li.nav-item
+									a.nav-link(href='single-product.html') Product Details
+								li.nav-item
+									a.nav-link(href='checkout.html') Product Checkout
+								li.nav-item
+									a.nav-link(href='cart.html') Shopping Cart
+								li.nav-item
+									a.nav-link(href='confirmation.html') Confirmation
+						li.nav-item.submenu.dropdown
+							a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Blog
+							ul.dropdown-menu
+								li.nav-item
+									a.nav-link(href='blog.html') Blog
+								li.nav-item
+									a.nav-link(href='single-blog.html') Blog Details
+						li.nav-item.submenu.dropdown
+							a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Pages
+							ul.dropdown-menu
+								li.nav-item
+									a.nav-link(href='login.html') Login
+								li.nav-item
+									a.nav-link(href='tracking.html') Tracking
+								li.nav-item
+									a.nav-link(href='elements.html') Elements
+						li.nav-item
+							a.nav-link(href='contact.html') Contact
+					ul.nav.navbar-nav.navbar-right
+						li.nav-item
+							a.cart(href='#')
+								span.ti-bag
+						li.nav-item
+							button.search
+								span#search.lnr.lnr-magnifier
+	#search_input_box.search_input
+		.container
+			form.d-flex.justify-content-between
+				input#search_input.form-control(type='text' placeholder='Search Here')
+				button.btn(type='submit')
+				span#close_search.lnr.lnr-cross(title='Close Search')
+// End Header Area
+// Start Banner Area
+section.banner-area.organic-breadcrumb
+	.container
+		.breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+			.col-first
+				h1 Shop Category page
+				nav.d-flex.align-items-center
+					a(href='index.html')
+						| Home
+						span.lnr.lnr-arrow-right
+					a(href='#')
+						| Shop
+						span.lnr.lnr-arrow-right
+					a(href='category.html') Fashon Category
+// End Banner Area
+.container
+	.row
+		.col-xl-3.col-lg-4.col-md-5
+			.sidebar-categories
+				.head Browse Categories
+				ul.main-categories
+					li.main-nav-list
+						a(data-toggle='collapse' href='#fruitsVegetable' aria-expanded='false' aria-controls='fruitsVegetable')
+							span.lnr.lnr-arrow-right
+							| Fruits and Vegetables
+							span.number (53)
+						ul#fruitsVegetable.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='fruitsVegetable')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#meatFish' aria-expanded='false' aria-controls='meatFish')
+							span.lnr.lnr-arrow-right
+							| Meat and Fish
+							span.number (53)
+						ul#meatFish.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='meatFish')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#cooking' aria-expanded='false' aria-controls='cooking')
+							span.lnr.lnr-arrow-right
+							| Cooking
+							span.number (53)
+						ul#cooking.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='cooking')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#beverages' aria-expanded='false' aria-controls='beverages')
+							span.lnr.lnr-arrow-right
+							| Beverages
+							span.number (24)
+						ul#beverages.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='beverages')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#homeClean' aria-expanded='false' aria-controls='homeClean')
+							span.lnr.lnr-arrow-right
+							| Home and Cleaning
+							span.number (53)
+						ul#homeClean.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='homeClean')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(href='#')
+							| Pest Control
+							span.number (24)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#officeProduct' aria-expanded='false' aria-controls='officeProduct')
+							span.lnr.lnr-arrow-right
+							| Office Products
+							span.number (77)
+						ul#officeProduct.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='officeProduct')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#beauttyProduct' aria-expanded='false' aria-controls='beauttyProduct')
+							span.lnr.lnr-arrow-right
+							| Beauty Products
+							span.number (65)
+						ul#beauttyProduct.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='beauttyProduct')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#healthProduct' aria-expanded='false' aria-controls='healthProduct')
+							span.lnr.lnr-arrow-right
+							| Health Products
+							span.number (29)
+						ul#healthProduct.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='healthProduct')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a(href='#')
+							| Pet Care
+							span.number (29)
+					li.main-nav-list
+						a(data-toggle='collapse' href='#homeAppliance' aria-expanded='false' aria-controls='homeAppliance')
+							span.lnr.lnr-arrow-right
+							| Home Appliances
+							span.number (15)
+						ul#homeAppliance.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='homeAppliance')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat
+									span.number (11)
+					li.main-nav-list
+						a.border-bottom-0(data-toggle='collapse' href='#babyCare' aria-expanded='false' aria-controls='babyCare')
+							span.lnr.lnr-arrow-right
+							| Baby Care
+							span.number (48)
+						ul#babyCare.collapse(data-toggle='collapse' aria-expanded='false' aria-controls='babyCare')
+							li.main-nav-list.child
+								a(href='#')
+									| Frozen Fish
+									span.number (13)
+							li.main-nav-list.child
+								a(href='#')
+									| Dried Fish
+									span.number (09)
+							li.main-nav-list.child
+								a(href='#')
+									| Fresh Fish
+									span.number (17)
+							li.main-nav-list.child
+								a(href='#')
+									| Meat Alternatives
+									span.number (01)
+							li.main-nav-list.child
+								a.border-bottom-0(href='#')
+									| Meat
+									span.number (11)
+			.sidebar-filter.mt-50
+				.top-filter-head Product Filters
+				.common-filter
+					.head Brands
+					form(action='#')
+						ul
+							li.filter-list
+								input#apple.pixel-radio(type='radio' name='brand')
+								label(for='apple')
+									| Apple
+									span (29)
+							li.filter-list
+								input#asus.pixel-radio(type='radio' name='brand')
+								label(for='asus')
+									| Asus
+									span (29)
+							li.filter-list
+								input#gionee.pixel-radio(type='radio' name='brand')
+								label(for='gionee')
+									| Gionee
+									span (19)
+							li.filter-list
+								input#micromax.pixel-radio(type='radio' name='brand')
+								label(for='micromax')
+									| Micromax
+									span (19)
+							li.filter-list
+								input#samsung.pixel-radio(type='radio' name='brand')
+								label(for='samsung')
+									| Samsung
+									span (19)
+				.common-filter
+					.head Color
+					form(action='#')
+						ul
+							li.filter-list
+								input#black.pixel-radio(type='radio' name='color')
+								label(for='black')
+									| Black
+									span (29)
+							li.filter-list
+								input#balckleather.pixel-radio(type='radio' name='color')
+								label(for='balckleather')
+									| Black
+									| Leather
+									span (29)
+							li.filter-list
+								input#blackred.pixel-radio(type='radio' name='color')
+								label(for='blackred')
+									| Black
+									| with red
+									span (19)
+							li.filter-list
+								input#gold.pixel-radio(type='radio' name='color')
+								label(for='gold')
+									| Gold
+									span (19)
+							li.filter-list
+								input#spacegrey.pixel-radio(type='radio' name='color')
+								label(for='spacegrey')
+									| Spacegrey
+									span (19)
+				.common-filter
+					.head Price
+					.price-range-area
+						#price-range
+						.value-wrapper.d-flex
+							.price Price:
+							span $
+							#lower-value
+							.to to
+							span $
+							#upper-value
+		.col-xl-9.col-lg-8.col-md-7
+			// Start Filter Bar
+			.filter-bar.d-flex.flex-wrap.align-items-center
+				.sorting
+					select
+						option(value='1') Default sorting
+						option(value='1') Default sorting
+						option(value='1') Default sorting
+				.sorting.mr-auto
+					select
+						option(value='1') Show 12
+						option(value='1') Show 12
+						option(value='1') Show 12
+				.pagination
+					a.prev-arrow(href='#')
+						i.fa.fa-long-arrow-left(aria-hidden='true')
+					a.active(href='#') 1
+					a(href='#') 2
+					a(href='#') 3
+					a.dot-dot(href='#')
+						i.fa.fa-ellipsis-h(aria-hidden='true')
+					a(href='#') 6
+					a.next-arrow(href='#')
+						i.fa.fa-long-arrow-right(aria-hidden='true')
+			// End Filter Bar
+			// Start Best Seller
+			section.lattest-product-area.pb-40.category-list
+				.row
+					// single product
+					.col-lg-4.col-md-6
+						.single-product
+							img.img-fluid(src='img/product/p1.jpg' alt='')
+							.product-details
+								h6
+									| addidas New Hammer sole
+									| for Sports person
+								.price
+									h6 $150.00
+									h6.l-through $210.00
+								.prd-bottom
+									a.social-info(href='')
+										span.ti-bag
+										p.hover-text add to bag
+									a.social-info(href='')
+										span.lnr.lnr-heart
+										p.hover-text Wishlist
+									a.social-info(href='')
+										span.lnr.lnr-sync
+										p.hover-text compare
+									a.social-info(href='')
+										span.lnr.lnr-move
+										p.hover-text view more
+					// single product
+					.col-lg-4.col-md-6
+						.single-product
+							img.img-fluid(src='img/product/p2.jpg' alt='')
+							.product-details
+								h6
+									| addidas New Hammer sole
+									| for Sports person
+								.price
+									h6 $150.00
+									h6.l-through $210.00
+								.prd-bottom
+									a.social-info(href='')
+										span.ti-bag
+										p.hover-text add to bag
+									a.social-info(href='')
+										span.lnr.lnr-heart
+										p.hover-text Wishlist
+									a.social-info(href='')
+										span.lnr.lnr-sync
+										p.hover-text compare
+									a.social-info(href='')
+										span.lnr.lnr-move
+										p.hover-text view more
+					// single product
+					.col-lg-4.col-md-6
+						.single-product
+							img.img-fluid(src='img/product/p3.jpg' alt='')
+							.product-details
+								h6
+									| addidas New Hammer sole
+									| for Sports person
+								.price
+									h6 $150.00
+									h6.l-through $210.00
+								.prd-bottom
+									a.social-info(href='')
+										span.ti-bag
+										p.hover-text add to bag
+									a.social-info(href='')
+										span.lnr.lnr-heart
+										p.hover-text Wishlist
+									a.social-info(href='')
+										span.lnr.lnr-sync
+										p.hover-text compare
+									a.social-info(href='')
+										span.lnr.lnr-move
+										p.hover-text view more
+					// single product
+					.col-lg-4.col-md-6
+						.single-product
+							img.img-fluid(src='img/product/p4.jpg' alt='')
+							.product-details
+								h6
+									| addidas New Hammer sole
+									| for Sports person
+								.price
+									h6 $150.00
+									h6.l-through $210.00
+								.prd-bottom
+									a.social-info(href='')
+										span.ti-bag
+										p.hover-text add to bag
+									a.social-info(href='')
+										span.lnr.lnr-heart
+										p.hover-text Wishlist
+									a.social-info(href='')
+										span.lnr.lnr-sync
+										p.hover-text compare
+									a.social-info(href='')
+										span.lnr.lnr-move
+										p.hover-text view more
+					// single product
+					.col-lg-4.col-md-6
+						.single-product
+							img.img-fluid(src='img/product/p5.jpg' alt='')
+							.product-details
+								h6
+									| addidas New Hammer sole
+									| for Sports person
+								.price
+									h6 $150.00
+									h6.l-through $210.00
+								.prd-bottom
+									a.social-info(href='')
+										span.ti-bag
+										p.hover-text add to bag
+									a.social-info(href='')
+										span.lnr.lnr-heart
+										p.hover-text Wishlist
+									a.social-info(href='')
+										span.lnr.lnr-sync
+										p.hover-text compare
+									a.social-info(href='')
+										span.lnr.lnr-move
+										p.hover-text view more
+					// single product
+					.col-lg-4.col-md-6
+						.single-product
+							img.img-fluid(src='img/product/p6.jpg' alt='')
+							.product-details
+								h6
+									| addidas New Hammer sole
+									| for Sports person
+								.price
+									h6 $150.00
+									h6.l-through $210.00
+								.prd-bottom
+									a.social-info(href='')
+										span.ti-bag
+										p.hover-text add to bag
+									a.social-info(href='')
+										span.lnr.lnr-heart
+										p.hover-text Wishlist
+									a.social-info(href='')
+										span.lnr.lnr-sync
+										p.hover-text compare
+									a.social-info(href='')
+										span.lnr.lnr-move
+										p.hover-text view more
+			// End Best Seller
+			// Start Filter Bar
+			.filter-bar.d-flex.flex-wrap.align-items-center
+				.sorting.mr-auto
+					select
+						option(value='1') Show 12
+						option(value='1') Show 12
+						option(value='1') Show 12
+				.pagination
+					a.prev-arrow(href='#')
+						i.fa.fa-long-arrow-left(aria-hidden='true')
+					a.active(href='#') 1
+					a(href='#') 2
+					a(href='#') 3
+					a.dot-dot(href='#')
+						i.fa.fa-ellipsis-h(aria-hidden='true')
+					a(href='#') 6
+					a.next-arrow(href='#')
+						i.fa.fa-long-arrow-right(aria-hidden='true')
+			// End Filter Bar
+// Start related-product Area
+section.related-product-area.section_gap
+	.container
+		.row.justify-content-center
+			.col-lg-6.text-center
+				.section-title
+					h1 Deals of the Week
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+						| magna aliqua.
+		.row
+			.col-lg-9
+				.row
+					.col-lg-4.col-md-4.col-sm-6.mb-20
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r1.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6.mb-20
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r2.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6.mb-20
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r3.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6.mb-20
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r5.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6.mb-20
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r6.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6.mb-20
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r7.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r9.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r10.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+					.col-lg-4.col-md-4.col-sm-6
+						.single-related-product.d-flex
+							a(href='#')
+								img(src='img/r11.jpg' alt='')
+							.desc
+								a.title(href='#') Black lace Heels
+								.price
+									h6 $189.00
+									h6.l-through $210.00
+			.col-lg-3
+				.ctg-right
+					a(href='#' target='_blank')
+						img.img-fluid.d-block.mx-auto(src='img/category/c5.jpg' alt='')
+// End related-product Area
+// start footer Area
+footer.footer-area.section_gap
+	.container
+		.row
+			.col-lg-3.col-md-6.col-sm-6
+				.single-footer-widget
+					h6 About Us
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+						| magna aliqua.
+			.col-lg-4.col-md-6.col-sm-6
+				.single-footer-widget
+					h6 Newsletter
+					p Stay update with our latest
+					#mc_embed_signup
+						form.form-inline(target='_blank' novalidate='true' action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01' method='get')
+							.d-flex.flex-row
+								input.form-control(name='EMAIL' placeholder='Enter Email' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required='' type='email')
+								button.click-btn.btn.btn-default
+									i.fa.fa-long-arrow-right(aria-hidden='true')
+								div(style='position: absolute; left: -5000px;')
+									input(name='b_36c4fd991d266f23781ded980_aefe40901a' tabindex='-1' value='' type='text')
+								//
+									<div class="col-lg-4 col-md-4">
+									<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+									</div>
+							.info
+			.col-lg-3.col-md-6.col-sm-6
+				.single-footer-widget.mail-chimp
+					h6.mb-20 Instragram Feed
+					ul.instafeed.d-flex.flex-wrap
+						li
+							img(src='img/i1.jpg' alt='')
+						li
+							img(src='img/i2.jpg' alt='')
+						li
+							img(src='img/i3.jpg' alt='')
+						li
+							img(src='img/i4.jpg' alt='')
+						li
+							img(src='img/i5.jpg' alt='')
+						li
+							img(src='img/i6.jpg' alt='')
+						li
+							img(src='img/i7.jpg' alt='')
+						li
+							img(src='img/i8.jpg' alt='')
+			.col-lg-2.col-md-6.col-sm-6
+				.single-footer-widget
+					h6 Follow Us
+					p Let us be social
+					.footer-social.d-flex.align-items-center
+						a(href='#')
+							i.fa.fa-facebook
+						a(href='#')
+							i.fa.fa-twitter
+						a(href='#')
+							i.fa.fa-dribbble
+						a(href='#')
+							i.fa.fa-behance
+		.footer-bottom.d-flex.justify-content-center.align-items-center.flex-wrap
+			p.footer-text.m-0
+				// Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+				| Copyright &copy;
+				script.
+					document.write(new Date().getFullYear());
+				|  All rights reserved | This template is made with 
+				i.fa.fa-heart-o(aria-hidden='true')
+				|  by 
+				a(href='https://colorlib.com' target='_blank') Colorlib
+				// Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+// End footer Area
+// Modal Quick Product View
+#exampleModal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+	.modal-dialog(role='document')
+		.container.relative
+			button.close(type='button' data-dismiss='modal' aria-label='Close')
+				span(aria-hidden='true') &times;
+			.product-quick-view
+				.row.align-items-center
+					.col-lg-6
+						.quick-view-carousel
+							.item(style='background: url(img/organic-food/q1.jpg);')
+							.item(style='background: url(img/organic-food/q1.jpg);')
+							.item(style='background: url(img/organic-food/q1.jpg);')
+					.col-lg-6
+						.quick-view-content
+							.top
+								h3.head Mill Oil 1000W Heater, White
+								.price.d-flex.align-items-center
+									span.lnr.lnr-tag
+									span.ml-10 $149.99
+								.category
+									| Category: 
+									span Household
+								.available
+									| Availibility: 
+									span In Stock
+							.middle
+								p.content
+									| Mill Oil is an innovative oil filled radiator with the most modern technology. If you are
+									| looking for something that can make your interior look awesome, and at the same time give you the pleasant
+									| warm feeling during the winter.
+								a.view-full(href='#')
+									| View full Details 
+									span.lnr.lnr-arrow-right
+							.bottom
+								.color-picker.d-flex.align-items-center
+									| Color:
+									span.single-pick
+									span.single-pick
+									span.single-pick
+									span.single-pick
+									span.single-pick
+								.quantity-container.d-flex.align-items-center.mt-15
+									| Quantity:
+									input.quantity-amount.ml-15(type='text' value='1')
+									.arrow-btn.d-inline-flex.flex-column
+										button.increase.arrow(type='button' title='Increase Quantity')
+											span.lnr.lnr-chevron-up
+										button.decrease.arrow(type='button' title='Decrease Quantity')
+											span.lnr.lnr-chevron-down
+								.d-flex.mt-20
+									a.view-btn.color-2(href='#')
+										span Add to Cart
+									a.like-btn(href='#')
+										span.lnr.lnr-layers
+									a.like-btn(href='#')
+										span.lnr.lnr-heart
+script(src='js/vendor/jquery-2.2.4.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js' integrity='sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4' crossorigin='anonymous')
+script(src='js/vendor/bootstrap.min.js')
+script(src='js/jquery.ajaxchimp.min.js')
+script(src='js/jquery.nice-select.min.js')
+script(src='js/jquery.sticky.js')
+script(src='js/nouislider.min.js')
+script(src='js/jquery.magnific-popup.min.js')
+script(src='js/owl.carousel.min.js')
+// gmaps Js
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE')
+script(src='js/gmaps.min.js')
+script(src='js/main.js')

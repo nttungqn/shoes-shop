@@ -1,501 +1,327 @@
 doctype html
-//
-	author: W3layouts
-	author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
 head
-	title
-		| Downy Shoes an Ecommerce Category Bootstrap Responsive Website Template | Check Out :: w3layouts
-	meta(name='viewport' content='width=device-width, initial-scale=1')
-	meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
-	meta(name='keywords' content='Downy Shoes Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, \
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
-	script(type='application/x-javascript').
-		addEventListener("load", function () {
-		setTimeout(hideURLbar, 0);
-		}, false);
-		function hideURLbar() {
-		window.scrollTo(0, 1);
-		}
-	// //custom-theme
-	link(href='css/bootstrap.css' rel='stylesheet' type='text/css' media='all')
-	link(rel='stylesheet' href='css/shop.css' type='text/css' media='screen' property='')
-	link(href='css/style7.css' rel='stylesheet' type='text/css' media='all')
-	// Owl-carousel-CSS
-	link(rel='stylesheet' type='text/css' href='css/checkout.css')
-	link(href='css/style.css' rel='stylesheet' type='text/css' media='all')
-	// font-awesome-icons
-	link(href='css/font-awesome.css' rel='stylesheet')
-	// //font-awesome-icons
-	link(href='//fonts.googleapis.com/css?family=Montserrat:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800' rel='stylesheet')
-	link(href='//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800' rel='stylesheet')
-// banner
-#home.banner_top.innerpage
-	.wrapper_top_w3layouts
-		.header_agileits
-			.logo.inner_page_log
-				h1
-					a.navbar-brand(href='index.html')
-						span Downy
-						i Shoes
-			.overlay.overlay-contentpush
-				button.overlay-close(type='button')
-					i.fa.fa-times(aria-hidden='true')
-				nav
-					ul
-						li
-							a.active(href='index.html') Home
-						li
-							a(href='about.html') About
-						li
-							a(href='404.html') Team
-						li
-							a(href='shop.html') Shop Now
-						li
-							a(href='contact.html') Contact
-			.mobile-nav-button
-				button#trigger-overlay(type='button')
-					i.fa.fa-bars(aria-hidden='true')
-			// cart details
-			.top_nav_right
-				.shoecart.shoecart2.cart.cart.box_1
-					form.last(action='#' method='post')
-						input(type='hidden' name='cmd' value='_cart')
-						input(type='hidden' name='display' value='1')
-						button.top_shoe_cart(type='submit' name='submit' value='')
-							i.fa.fa-cart-arrow-down(aria-hidden='true')
-	// //cart details
-	// search
-	.search_w3ls_agileinfo
-		.cd-main-header
-			ul.cd-header-buttons
-				li
-					a.cd-search-trigger(href='#cd-search')
-						span
-		#cd-search.cd-search
-			form(action='#' method='post')
-				input(name='Search' type='search' placeholder='Click enter after typing...')
-	// //search
-	.clearfix
-	// /banner_inner
-	.services-breadcrumb_w3ls_agileinfo
-		.inner_breadcrumb_agileits_w3
-			ul.short
-				li
-					a(href='index.html') Home
-					i |
-				li Check Out
-	// //banner_inner
-// //banner
-// top Products
-.ads-grid_shop
-	.shop_inner_inf
-		.privacy.about
-			h3
-				| Chec
-				span kout
-			.checkout-right
-				h4
-					| Your shopping cart contains: 
-					span 3 Products
-				table.timetable_sub
-					thead
-						tr
-							th SL No.
-							th Product
-							th Quality
-							th Product Name
-							th Price
-							th Remove
-					tbody
-						tr.rem1
-							td.invert 1
-							td.invert-image
-								a(href='single.html')
-									img.img-responsive(src='images/s1.jpg' alt=' ')
-							td.invert
-								.quantity
-									.quantity-select
-										.entry.value-minus &nbsp;
-										.entry.value
-											span 1
-										.entry.value-plus.active &nbsp;
-							td.invert Bella Toes
-							td.invert $675.00
-							td.invert
-								.rem
-									.close1  
-						tr.rem2
-							td.invert 2
-							td.invert-image
-								a(href='single.html')
-									img.img-responsive(src='images/s5.jpg' alt=' ')
-							td.invert
-								.quantity
-									.quantity-select
-										.entry.value-minus &nbsp;
-										.entry.value
-											span 1
-										.entry.value-plus.active &nbsp;
-							td.invert Red Bellies
-							td.invert $325.00
-							td.invert
-								.rem
-									.close2  
-						tr.rem3
-							td.invert 3
-							td.invert-image
-								a(href='single.html')
-									img.img-responsive(src='images/s2.jpg' alt=' ')
-							td.invert
-								.quantity
-									.quantity-select
-										.entry.value-minus &nbsp;
-										.entry.value
-											span 1
-										.entry.value-plus.active &nbsp;
-							td.invert Chikku Loafers
-							td.invert $405.00
-							td.invert
-								.rem
-									.close3  
-			.checkout-left
-				.col-md-4.checkout-left-basket
-					h4 Continue to basket
-					ul
-						li
-							| Product1 
-							i -
-							span $675.00 
-						li
-							| Product2 
-							i -
-							span $325.00 
-						li
-							| Product3 
-							i -
-							span $405.00 
-						li
-							| Total Service Charges 
-							i -
-							span $55.00
-						li
-							| Total 
-							i -
-							span $1405.00
-				.col-md-8.address_form
-					h4 Add a new Details
-					form.creditly-card-form.agileinfo_form(action='payment.html' method='post')
-						section.creditly-wrapper.wrapper
-							.information-wrapper
-								.first-row.form-group
-									.controls
-										label.control-label Full name: 
-										input.billing-address-name.form-control(type='text' name='name' placeholder='Full name')
-									.card_number_grids
-										.card_number_grid_left
-											.controls
-												label.control-label Mobile number:
-												input.form-control(type='text' placeholder='Mobile number')
-										.card_number_grid_right
-											.controls
-												label.control-label Landmark: 
-												input.form-control(type='text' placeholder='Landmark')
-										.clear  
-									.controls
-										label.control-label Town/City: 
-										input.form-control(type='text' placeholder='Town/City')
-									.controls
-										label.control-label Address type: 
-										select.form-control.option-w3ls
-											option Office
-											option Home
-											option Commercial
-								button.submit.check_out Delivery to this Address
-					.checkout-right-basket
-						a(href='payment.html') Make a Payment 
-				.clearfix  
-				.clearfix
-	// //top products
-	.mid_slider_w3lsagile
-		.col-md-3.mid_slider_text
-			h5 Some More Shoes
-		.col-md-9.mid_slider_info
-			#myCarousel.carousel.slide(data-ride='carousel')
-				// Indicators
-				ol.carousel-indicators
-					li(data-target='#myCarousel' data-slide-to='0')
-					li.active(data-target='#myCarousel' data-slide-to='1')
-					li(data-target='#myCarousel' data-slide-to='2')
-					li(data-target='#myCarousel' data-slide-to='3')
-				.carousel-inner(role='listbox')
-					.item
-						.row
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g1.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g2.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g3.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g4.jpg' alt='Image' style='max-width:100%;')
-					.item.active
-						.row
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g5.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g6.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g2.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g1.jpg' alt='Image' style='max-width:100%;')
-					.item
-						.row
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g1.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g2.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g3.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g4.jpg' alt='Image' style='max-width:100%;')
-					.item
-						.row
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g1.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g2.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g3.jpg' alt='Image' style='max-width:100%;')
-							.col-md-3.col-sm-3.col-xs-3.slidering
-								.thumbnail
-									img(src='images/g4.jpg' alt='Image' style='max-width:100%;')
-				a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
-					span.fa.fa-chevron-left(aria-hidden='true')
-					span.sr-only Previous
-				a.right.carousel-control(href='#myCarousel' role='button' data-slide='next')
-					span.fa.fa-chevron-right(aria-hidden='true')
-					span.sr-only Next
-				// The Modal
-		.clearfix  
-	// /newsletter
-	.newsletter_w3layouts_agile
-		.col-sm-6.newsleft
-			h3 Sign up for Newsletter !
-		.col-sm-6.newsright
-			form(action='#' method='post')
-				input(type='email' placeholder='Enter your email...' name='email' required='')
-				input(type='submit' value='Submit')
-		.clearfix
-	// //newsletter
-	// footer
-	.footer_agileinfo_w3
-		.footer_inner_info_w3ls_agileits
-			.col-md-3.footer-left
-				h2
-					a(href='index.html')
-						span D
-						| owny Shoes
-				p
-					| Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
-				ul.social-nav.model-3d-0.footer-social.social.two
-					li
-						a.facebook(href='#')
-							.front
-								i.fa.fa-facebook(aria-hidden='true')
-							.back
-								i.fa.fa-facebook(aria-hidden='true')
-					li
-						a.twitter(href='#')
-							.front
-								i.fa.fa-twitter(aria-hidden='true')
-							.back
-								i.fa.fa-twitter(aria-hidden='true')
-					li
-						a.instagram(href='#')
-							.front
-								i.fa.fa-instagram(aria-hidden='true')
-							.back
-								i.fa.fa-instagram(aria-hidden='true')
-					li
-						a.pinterest(href='#')
-							.front
-								i.fa.fa-linkedin(aria-hidden='true')
-							.back
-								i.fa.fa-linkedin(aria-hidden='true')
-			.col-md-9.footer-right
-				.sign-grds
-					.col-md-4.sign-gd
-						h4
-							| Our 
-							span Information
-						ul
-							li
-								a(href='index.html') Home
-							li
-								a(href='about.html') About
-							li
-								a(href='404.html') Services
-							li
-								a(href='404.html') Short Codes
-							li
-								a(href='contact.html') Contact
-					.col-md-5.sign-gd-two
-						h4
-							| Store 
-							span Information
-						.address
-							.address-grid
-								.address-left
-									i.fa.fa-phone(aria-hidden='true')
-								.address-right
-									h6 Phone Number
-									p +1 234 567 8901
-								.clearfix  
-							.address-grid
-								.address-left
-									i.fa.fa-envelope(aria-hidden='true')
-								.address-right
-									h6 Email Address
-									p
-										| Email :
-										a(href='mailto:example@email.com')  mail@example.com
-								.clearfix  
-							.address-grid
-								.address-left
-									i.fa.fa-map-marker(aria-hidden='true')
-								.address-right
-									h6 Location
-									p
-										| Broome St, NY 10002,California, USA.
-								.clearfix  
-					.col-md-3.sign-gd.flickr-post
-						h4
-							| Flickr 
-							span Posts
-						ul
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t1.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t2.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t3.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t4.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t1.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t2.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t3.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t2.jpg' alt=' ')
-							li
-								a(href='single.html')
-									img.img-responsive(src='images/t4.jpg' alt=' ')
-					.clearfix
-			.clearfix
-			p.copy-right-w3ls-agileits
-				| &amp;copy 2018 Downy Shoes. All rights reserved | Design by 
-				a(href='http://w3layouts.com/') w3layouts
-// //footer
-a#toTop.scroll(href='#home' style='display: block;')
-	span#toTopHover(style='opacity: 1;')  
-// js
-script(type='text/javascript' src='js/jquery-2.1.4.min.js')
-// //js
-// cart-js
-script(src='js/minicart.js')
-script.
-	shoe.render();
-	shoe.cart.on('shoe_checkout', function (evt) {
-	var items, len, i;
-	if (this.subtotal() > 0) {
-	items = this.items();
-	for (i = 0, len = items.length; i < len; i++) {}
-	}
-	});
-// //cart-js
-// /nav
-script(src='js/modernizr-2.6.2.min.js')
-script(src='js/classie.js')
-script(src='js/demo1.js')
-// //nav
-// search-bar
-script(src='js/search.js')
-// //search-bar
-// quantity
-script.
-	$('.value-plus').on('click', function () {
-	var divUpd = $(this).parent().find('.value'),
-	newVal = parseInt(divUpd.text(), 10) + 1;
-	divUpd.text(newVal);
-	});
-	$('.value-minus').on('click', function () {
-	var divUpd = $(this).parent().find('.value'),
-	newVal = parseInt(divUpd.text(), 10) - 1;
-	if (newVal >= 1) divUpd.text(newVal);
-	});
-// quantity
-script.
-	$(document).ready(function (c) {
-	$('.close1').on('click', function (c) {
-	$('.rem1').fadeOut('slow', function (c) {
-	$('.rem1').remove();
-	});
-	});
-	});
-script.
-	$(document).ready(function (c) {
-	$('.close2').on('click', function (c) {
-	$('.rem2').fadeOut('slow', function (c) {
-	$('.rem2').remove();
-	});
-	});
-	});
-script.
-	$(document).ready(function (c) {
-	$('.close3').on('click', function (c) {
-	$('.rem3').fadeOut('slow', function (c) {
-	$('.rem3').remove();
-	});
-	});
-	});
-// start-smoth-scrolling
-script(type='text/javascript' src='js/move-top.js')
-script(type='text/javascript' src='js/easing.js')
-script(type='text/javascript').
-	jQuery(document).ready(function ($) {
-	$(".scroll").click(function (event) {
-	event.preventDefault();
-	$('html,body').animate({
-	scrollTop: $(this.hash).offset().top
-	}, 1000);
-	});
-	});
-// //end-smoth-scrolling
-script(type='text/javascript' src='js/bootstrap-3.1.1.min.js')
+    // Mobile Specific Meta
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Favicon
+    link(rel='shortcut icon' href='img/fav.png')
+    // Author Meta
+    meta(name='author' content='CodePixar')
+    // Meta Description
+    meta(name='description' content='')
+    // Meta Keyword
+    meta(name='keywords' content='')
+    // meta character set
+    meta(charset='UTF-8')
+    // Site Title
+    title Karma Shop
+    //
+        CSS
+        =============================================
+    link(rel='stylesheet' href='css/linearicons.css')
+    link(rel='stylesheet' href='css/owl.carousel.css')
+    link(rel='stylesheet' href='css/themify-icons.css')
+    link(rel='stylesheet' href='css/font-awesome.min.css')
+    link(rel='stylesheet' href='css/nice-select.css')
+    link(rel='stylesheet' href='css/nouislider.min.css')
+    link(rel='stylesheet' href='css/bootstrap.css')
+    link(rel='stylesheet' href='css/main.css')
+// Start Header Area
+header.header_area.sticky-header
+    .main_menu
+        nav.navbar.navbar-expand-lg.navbar-light.main_box
+            .container
+                // Brand and toggle get grouped for better mobile display
+                a.navbar-brand.logo_h(href='index.html')
+                    img(src='img/logo.png' alt='')
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                // Collect the nav links, forms, and other content for toggling
+                #navbarSupportedContent.collapse.navbar-collapse.offset
+                    ul.nav.navbar-nav.menu_nav.ml-auto
+                        li.nav-item
+                            a.nav-link(href='index.html') Home
+                        li.nav-item.submenu.dropdown.active
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Shop
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='category.html') Shop Category
+                                li.nav-item
+                                    a.nav-link(href='single-product.html') Product Details
+                                li.nav-item.active
+                                    a.nav-link(href='checkout.html') Product Checkout
+                                li.nav-item
+                                    a.nav-link(href='cart.html') Shopping Cart
+                                li.nav-item
+                                    a.nav-link(href='confirmation.html') Confirmation
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Blog
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='blog.html') Blog
+                                li.nav-item
+                                    a.nav-link(href='single-blog.html') Blog Details
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Pages
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='login.html') Login
+                                li.nav-item
+                                    a.nav-link(href='tracking.html') Tracking
+                                li.nav-item
+                                    a.nav-link(href='elements.html') Elements
+                        li.nav-item
+                            a.nav-link(href='contact.html') Contact
+                    ul.nav.navbar-nav.navbar-right
+                        li.nav-item
+                            a.cart(href='#')
+                                span.ti-bag
+                        li.nav-item
+                            button.search
+                                span#search.lnr.lnr-magnifier
+    #search_input_box.search_input
+        .container
+            form.d-flex.justify-content-between
+                input#search_input.form-control(type='text' placeholder='Search Here')
+                button.btn(type='submit')
+                span#close_search.lnr.lnr-cross(title='Close Search')
+// End Header Area
+// Start Banner Area
+section.banner-area.organic-breadcrumb
+    .container
+        .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+            .col-first
+                h1 Checkout
+                nav.d-flex.align-items-center
+                    a(href='index.html')
+                        | Home
+                        span.lnr.lnr-arrow-right
+                    a(href='single-product.html') Checkout
+// End Banner Area
+// ================Checkout Area =================
+section.checkout_area.section_gap
+    .container
+        .returning_customer
+            .check_title
+                h2
+                    | Returning Customer? 
+                    a(href='#') Click here to login
+            p
+                | If you have shopped with us before, please enter your details in the boxes below. If you are a new
+                | customer, please proceed to the Billing &amp; Shipping section.
+            form.row.contact_form(action='#' method='post' novalidate='novalidate')
+                .col-md-6.form-group.p_star
+                    input#name.form-control(type='text' name='name')
+                    span.placeholder(data-placeholder='Username or Email')
+                .col-md-6.form-group.p_star
+                    input#password.form-control(type='password' name='password')
+                    span.placeholder(data-placeholder='Password')
+                .col-md-12.form-group
+                    button.primary-btn(type='submit' value='submit') login
+                    .creat_account
+                        input#f-option(type='checkbox' name='selector')
+                        label(for='f-option') Remember me
+                    a.lost_pass(href='#') Lost your password?
+        .cupon_area
+            .check_title
+                h2
+                    | Have a coupon? 
+                    a(href='#') Click here to enter your code
+            input(type='text' placeholder='Enter coupon code')
+            a.tp_btn(href='#') Apply Coupon
+        .billing_details
+            .row
+                .col-lg-8
+                    h3 Billing Details
+                    form.row.contact_form(action='#' method='post' novalidate='novalidate')
+                        .col-md-6.form-group.p_star
+                            input#first.form-control(type='text' name='name')
+                            span.placeholder(data-placeholder='First name')
+                        .col-md-6.form-group.p_star
+                            input#last.form-control(type='text' name='name')
+                            span.placeholder(data-placeholder='Last name')
+                        .col-md-12.form-group
+                            input#company.form-control(type='text' name='company' placeholder='Company name')
+                        .col-md-6.form-group.p_star
+                            input#number.form-control(type='text' name='number')
+                            span.placeholder(data-placeholder='Phone number')
+                        .col-md-6.form-group.p_star
+                            input#email.form-control(type='text' name='compemailany')
+                            span.placeholder(data-placeholder='Email Address')
+                        .col-md-12.form-group.p_star
+                            select.country_select
+                                option(value='1') Country
+                                option(value='2') Country
+                                option(value='4') Country
+                        .col-md-12.form-group.p_star
+                            input#add1.form-control(type='text' name='add1')
+                            span.placeholder(data-placeholder='Address line 01')
+                        .col-md-12.form-group.p_star
+                            input#add2.form-control(type='text' name='add2')
+                            span.placeholder(data-placeholder='Address line 02')
+                        .col-md-12.form-group.p_star
+                            input#city.form-control(type='text' name='city')
+                            span.placeholder(data-placeholder='Town/City')
+                        .col-md-12.form-group.p_star
+                            select.country_select
+                                option(value='1') District
+                                option(value='2') District
+                                option(value='4') District
+                        .col-md-12.form-group
+                            input#zip.form-control(type='text' name='zip' placeholder='Postcode/ZIP')
+                        .col-md-12.form-group
+                            .creat_account
+                                input#f-option2(type='checkbox' name='selector')
+                                label(for='f-option2') Create an account?
+                        .col-md-12.form-group
+                            .creat_account
+                                h3 Shipping Details
+                                input#f-option3(type='checkbox' name='selector')
+                                label(for='f-option3') Ship to a different address?
+                            textarea#message.form-control(name='message' rows='1' placeholder='Order Notes')
+                .col-lg-4
+                    .order_box
+                        h2 Your Order
+                        ul.list
+                            li
+                                a(href='#')
+                                    | Product 
+                                    span Total
+                            li
+                                a(href='#')
+                                    | Fresh Blackberry 
+                                    span.middle x 02
+                                    span.last $720.00
+                            li
+                                a(href='#')
+                                    | Fresh Tomatoes 
+                                    span.middle x 02
+                                    span.last $720.00
+                            li
+                                a(href='#')
+                                    | Fresh Brocoli 
+                                    span.middle x 02
+                                    span.last $720.00
+                        ul.list.list_2
+                            li
+                                a(href='#')
+                                    | Subtotal 
+                                    span $2160.00
+                            li
+                                a(href='#')
+                                    | Shipping 
+                                    span Flat rate: $50.00
+                            li
+                                a(href='#')
+                                    | Total 
+                                    span $2210.00
+                        .payment_item
+                            .radion_btn
+                                input#f-option5(type='radio' name='selector')
+                                label(for='f-option5') Check payments
+                                .check
+                            p
+                                | Please send a check to Store Name, Store Street, Store Town, Store State / County,
+                                | Store Postcode.
+                        .payment_item.active
+                            .radion_btn
+                                input#f-option6(type='radio' name='selector')
+                                label(for='f-option6') Paypal 
+                                img(src='img/product/card.jpg' alt='')
+                                .check
+                            p
+                                | Pay via PayPal; you can pay with your credit card if you don&rsquo;t have a PayPal
+                                | account.
+                        .creat_account
+                            input#f-option4(type='checkbox' name='selector')
+                            label(for='f-option4') I&rsquo;ve read and accept the 
+                            a(href='#') terms &amp; conditions*
+                        a.primary-btn(href='#') Proceed to Paypal
+// ================End Checkout Area =================
+// start footer Area
+footer.footer-area.section_gap
+    .container
+        .row
+            .col-lg-3.col-md-6.col-sm-6
+                .single-footer-widget
+                    h6 About Us
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        | ut labore dolore
+                        | magna aliqua.
+            .col-lg-4.col-md-6.col-sm-6
+                .single-footer-widget
+                    h6 Newsletter
+                    p Stay update with our latest
+                    #mc_embed_signup
+                        form.form-inline(target='_blank' novalidate='true' action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01' method='get')
+                            .d-flex.flex-row
+                                input.form-control(name='EMAIL' placeholder='Enter Email' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required='' type='email')
+                                button.click-btn.btn.btn-default
+                                    i.fa.fa-long-arrow-right(aria-hidden='true')
+                                div(style='position: absolute; left: -5000px;')
+                                    input(name='b_36c4fd991d266f23781ded980_aefe40901a' tabindex='-1' value='' type='text')
+                                //
+                                    <div class="col-lg-4 col-md-4">
+                                    <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+                                    </div>
+                            .info
+            .col-lg-3.col-md-6.col-sm-6
+                .single-footer-widget.mail-chimp
+                    h6.mb-20 Instragram Feed
+                    ul.instafeed.d-flex.flex-wrap
+                        li
+                            img(src='img/i1.jpg' alt='')
+                        li
+                            img(src='img/i2.jpg' alt='')
+                        li
+                            img(src='img/i3.jpg' alt='')
+                        li
+                            img(src='img/i4.jpg' alt='')
+                        li
+                            img(src='img/i5.jpg' alt='')
+                        li
+                            img(src='img/i6.jpg' alt='')
+                        li
+                            img(src='img/i7.jpg' alt='')
+                        li
+                            img(src='img/i8.jpg' alt='')
+            .col-lg-2.col-md-6.col-sm-6
+                .single-footer-widget
+                    h6 Follow Us
+                    p Let us be social
+                    .footer-social.d-flex.align-items-center
+                        a(href='#')
+                            i.fa.fa-facebook
+                        a(href='#')
+                            i.fa.fa-twitter
+                        a(href='#')
+                            i.fa.fa-dribbble
+                        a(href='#')
+                            i.fa.fa-behance
+        .footer-bottom.d-flex.justify-content-center.align-items-center.flex-wrap
+            p.footer-text.m-0
+                // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                | Copyright &copy;
+                script.
+                    document.write(new Date().getFullYear());
+                |  All rights reserved | This template is made with 
+                i.fa.fa-heart-o(aria-hidden='true')
+                |  by 
+                a(href='https://colorlib.com' target='_blank') Colorlib
+                // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+// End footer Area
+script(src='js/vendor/jquery-2.2.4.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js' integrity='sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4' crossorigin='anonymous')
+script(src='js/vendor/bootstrap.min.js')
+script(src='js/jquery.ajaxchimp.min.js')
+script(src='js/jquery.nice-select.min.js')
+script(src='js/jquery.sticky.js')
+script(src='js/nouislider.min.js')
+script(src='js/jquery.magnific-popup.min.js')
+script(src='js/owl.carousel.min.js')
+// gmaps Js
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE')
+script(src='js/gmaps.min.js')
+script(src='js/main.js')

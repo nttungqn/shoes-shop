@@ -1,0 +1,607 @@
+doctype html
+head
+    // Mobile Specific Meta
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Favicon
+    link(rel='shortcut icon' href='img/fav.png')
+    // Author Meta
+    meta(name='author' content='CodePixar')
+    // Meta Description
+    meta(name='description' content='')
+    // Meta Keyword
+    meta(name='keywords' content='')
+    // meta character set
+    meta(charset='UTF-8')
+    // Site Title
+    title Karma Shop
+    //
+        CSS
+        =============================================
+    link(rel='stylesheet' href='css/linearicons.css')
+    link(rel='stylesheet' href='css/font-awesome.min.css')
+    link(rel='stylesheet' href='css/themify-icons.css')
+    link(rel='stylesheet' href='css/bootstrap.css')
+    link(rel='stylesheet' href='css/owl.carousel.css')
+    link(rel='stylesheet' href='css/nice-select.css')
+    link(rel='stylesheet' href='css/nouislider.min.css')
+    link(rel='stylesheet' href='css/ion.rangeSlider.css')
+    link(rel='stylesheet' href='css/ion.rangeSlider.skinFlat.css')
+    link(rel='stylesheet' href='css/main.css')
+// Start Header Area
+header.header_area.sticky-header
+    .main_menu
+        nav.navbar.navbar-expand-lg.navbar-light.main_box
+            .container
+                // Brand and toggle get grouped for better mobile display
+                a.navbar-brand.logo_h(href='index.html')
+                    img(src='img/logo.png' alt='')
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                // Collect the nav links, forms, and other content for toggling
+                #navbarSupportedContent.collapse.navbar-collapse.offset
+                    ul.nav.navbar-nav.menu_nav.ml-auto
+                        li.nav-item
+                            a.nav-link(href='index.html') Home
+                        li.nav-item.submenu.dropdown.active
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Shop
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='category.html') Shop Category
+                                li.nav-item.active
+                                    a.nav-link(href='single-product.html') Product Details
+                                li.nav-item
+                                    a.nav-link(href='checkout.html') Product Checkout
+                                li.nav-item
+                                    a.nav-link(href='cart.html') Shopping Cart
+                                li.nav-item
+                                    a.nav-link(href='confirmation.html') Confirmation
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Blog
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='blog.html') Blog
+                                li.nav-item
+                                    a.nav-link(href='single-blog.html') Blog Details
+                        li.nav-item.submenu.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Pages
+                            ul.dropdown-menu
+                                li.nav-item
+                                    a.nav-link(href='login.html') Login
+                                li.nav-item
+                                    a.nav-link(href='tracking.html') Tracking
+                                li.nav-item
+                                    a.nav-link(href='elements.html') Elements
+                        li.nav-item
+                            a.nav-link(href='contact.html') Contact
+                    ul.nav.navbar-nav.navbar-right
+                        li.nav-item
+                            a.cart(href='#')
+                                span.ti-bag
+                        li.nav-item
+                            button.search
+                                span#search.lnr.lnr-magnifier
+    #search_input_box.search_input
+        .container
+            form.d-flex.justify-content-between
+                input#search_input.form-control(type='text' placeholder='Search Here')
+                button.btn(type='submit')
+                span#close_search.lnr.lnr-cross(title='Close Search')
+// End Header Area
+// Start Banner Area
+section.banner-area.organic-breadcrumb
+    .container
+        .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+            .col-first
+                h1 Product Details Page
+                nav.d-flex.align-items-center
+                    a(href='index.html')
+                        | Home
+                        span.lnr.lnr-arrow-right
+                    a(href='#')
+                        | Shop
+                        span.lnr.lnr-arrow-right
+                    a(href='single-product.html') product-details
+// End Banner Area
+// ================Single Product Area =================
+.product_image_area
+    .container
+        .row.s_product_inner
+            .col-lg-6
+                .s_Product_carousel
+                    .single-prd-item
+                        img.img-fluid(src='img/category/s-p1.jpg' alt='')
+                    .single-prd-item
+                        img.img-fluid(src='img/category/s-p1.jpg' alt='')
+                    .single-prd-item
+                        img.img-fluid(src='img/category/s-p1.jpg' alt='')
+            .col-lg-5.offset-lg-1
+                .s_product_text
+                    h3 Faded SkyBlu Denim Jeans
+                    h2 $149.99
+                    ul.list
+                        li
+                            a.active(href='#')
+                                span Category
+                                |  : Household
+                        li
+                            a(href='#')
+                                span Availibility
+                                |  : In Stock
+                    p
+                        | Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
+                        | something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
+                        | during the winter.
+                    .product_count
+                        label(for='qty') Quantity:
+                        input#sst.input-text.qty(type='text' name='qty' maxlength='12' value='1' title='Quantity:')
+                        button.increase.items-count(onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" type='button')
+                            i.lnr.lnr-chevron-up
+                        button.reduced.items-count(onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;" type='button')
+                            i.lnr.lnr-chevron-down
+                    .card_area.d-flex.align-items-center
+                        a.primary-btn(href='#') Add to Cart
+                        a.icon_btn(href='#')
+                            i.lnr.lnr.lnr-diamond
+                        a.icon_btn(href='#')
+                            i.lnr.lnr.lnr-heart
+// ================End Single Product Area =================
+// ================Product Description Area =================
+section.product_description_area
+    .container
+        ul#myTab.nav.nav-tabs(role='tablist')
+            li.nav-item
+                a#home-tab.nav-link(data-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true') Description
+            li.nav-item
+                a#profile-tab.nav-link(data-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false') Specification
+            li.nav-item
+                a#contact-tab.nav-link(data-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false') Comments
+            li.nav-item
+                a#review-tab.nav-link.active(data-toggle='tab' href='#review' role='tab' aria-controls='review' aria-selected='false') Reviews
+        #myTabContent.tab-content
+            #home.tab-pane.fade(role='tabpanel' aria-labelledby='home-tab')
+                p
+                    | Beryl Cook is one of Britain&rsquo;s most talented and amusing artists .Beryl&rsquo;s pictures feature women of all shapes
+                    | and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
+                    | Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to
+                    | London and then Hampton, she eventually married her next door neighbour from Reading, John Cook. He was an
+                    | officer in the Merchant Navy and after he left the sea in 1956, they bought a pub for a year before John took a
+                    | job in Southern Rhodesia with a motor company. Beryl bought their young son a box of watercolours, and when
+                    | showing him how to use it, she decided that she herself quite enjoyed painting. John subsequently bought her a
+                    | child&rsquo;s painting set for her birthday and it was with this that she produced her first significant work, a
+                    | half-length portrait of a dark-skinned lady with a vacant expression and large drooping breasts. It was aptly
+                    | named &lsquo;Hangover&rsquo; by Beryl&rsquo;s husband and
+                p
+                    | It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing
+                    | more and more recipe books and Internet websites that are dedicated to the act of cooking for one. Divorce and
+                    | the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
+                    | more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
+                    | streamlined plan of cooking that is more efficient for one person creating less
+            #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+                .table-responsive
+                    table.table
+                        tbody
+                            tr
+                                td
+                                    h5 Width
+                                td
+                                    h5 128mm
+                            tr
+                                td
+                                    h5 Height
+                                td
+                                    h5 508mm
+                            tr
+                                td
+                                    h5 Depth
+                                td
+                                    h5 85mm
+                            tr
+                                td
+                                    h5 Weight
+                                td
+                                    h5 52gm
+                            tr
+                                td
+                                    h5 Quality checking
+                                td
+                                    h5 yes
+                            tr
+                                td
+                                    h5 Freshness Duration
+                                td
+                                    h5 03days
+                            tr
+                                td
+                                    h5 When packeting
+                                td
+                                    h5 Without touch of hand
+                            tr
+                                td
+                                    h5 Each Box contains
+                                td
+                                    h5 60pcs
+            #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+                .row
+                    .col-lg-6
+                        .comment_list
+                            .review_item
+                                .media
+                                    .d-flex
+                                        img(src='img/product/review-1.png' alt='')
+                                    .media-body
+                                        h4 Blake Ruiz
+                                        h5 12th Feb, 2018 at 05:56 pm
+                                        a.reply_btn(href='#') Reply
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    | commodo
+                            .review_item.reply
+                                .media
+                                    .d-flex
+                                        img(src='img/product/review-2.png' alt='')
+                                    .media-body
+                                        h4 Blake Ruiz
+                                        h5 12th Feb, 2018 at 05:56 pm
+                                        a.reply_btn(href='#') Reply
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    | commodo
+                            .review_item
+                                .media
+                                    .d-flex
+                                        img(src='img/product/review-3.png' alt='')
+                                    .media-body
+                                        h4 Blake Ruiz
+                                        h5 12th Feb, 2018 at 05:56 pm
+                                        a.reply_btn(href='#') Reply
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    | commodo
+                    .col-lg-6
+                        .review_box
+                            h4 Post a comment
+                            form#contactForm.row.contact_form(action='contact_process.php' method='post' novalidate='novalidate')
+                                .col-md-12
+                                    .form-group
+                                        input#name.form-control(type='text' name='name' placeholder='Your Full name')
+                                .col-md-12
+                                    .form-group
+                                        input#email.form-control(type='email' name='email' placeholder='Email Address')
+                                .col-md-12
+                                    .form-group
+                                        input#number.form-control(type='text' name='number' placeholder='Phone Number')
+                                .col-md-12
+                                    .form-group
+                                        textarea#message.form-control(name='message' rows='1' placeholder='Message')
+                                .col-md-12.text-right
+                                    button.btn.primary-btn(type='submit' value='submit') Submit Now
+            #review.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='review-tab')
+                .row
+                    .col-lg-6
+                        .row.total_rate
+                            .col-6
+                                .box_total
+                                    h5 Overall
+                                    h4 4.0
+                                    h6 (03 Reviews)
+                            .col-6
+                                .rating_list
+                                    h3 Based on 3 Reviews
+                                    ul.list
+                                        li
+                                            a(href='#')
+                                                | 5 Star 
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                |  01
+                                        li
+                                            a(href='#')
+                                                | 4 Star 
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                |  01
+                                        li
+                                            a(href='#')
+                                                | 3 Star 
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                |  01
+                                        li
+                                            a(href='#')
+                                                | 2 Star 
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                |  01
+                                        li
+                                            a(href='#')
+                                                | 1 Star 
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                i.fa.fa-star
+                                                |  01
+                        .review_list
+                            .review_item
+                                .media
+                                    .d-flex
+                                        img(src='img/product/review-1.png' alt='')
+                                    .media-body
+                                        h4 Blake Ruiz
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    | commodo
+                            .review_item
+                                .media
+                                    .d-flex
+                                        img(src='img/product/review-2.png' alt='')
+                                    .media-body
+                                        h4 Blake Ruiz
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    | commodo
+                            .review_item
+                                .media
+                                    .d-flex
+                                        img(src='img/product/review-3.png' alt='')
+                                    .media-body
+                                        h4 Blake Ruiz
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    | commodo
+                    .col-lg-6
+                        .review_box
+                            h4 Add a Review
+                            p Your Rating:
+                            ul.list
+                                li
+                                    a(href='#')
+                                        i.fa.fa-star
+                                li
+                                    a(href='#')
+                                        i.fa.fa-star
+                                li
+                                    a(href='#')
+                                        i.fa.fa-star
+                                li
+                                    a(href='#')
+                                        i.fa.fa-star
+                                li
+                                    a(href='#')
+                                        i.fa.fa-star
+                            p Outstanding
+                            form#contactForm.row.contact_form(action='contact_process.php' method='post' novalidate='novalidate')
+                                .col-md-12
+                                    .form-group
+                                        input#name.form-control(type='text' name='name' placeholder='Your Full name' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Full name'")
+                                .col-md-12
+                                    .form-group
+                                        input#email.form-control(type='email' name='email' placeholder='Email Address' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'")
+                                .col-md-12
+                                    .form-group
+                                        input#number.form-control(type='text' name='number' placeholder='Phone Number' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'")
+                                .col-md-12
+                                    .form-group
+                                        textarea#message.form-control(name='message' rows='1' placeholder='Review' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'")
+                                .col-md-12.text-right
+                                    button.primary-btn(type='submit' value='submit') Submit Now
+// ================End Product Description Area =================
+// Start related-product Area
+section.related-product-area.section_gap_bottom
+    .container
+        .row.justify-content-center
+            .col-lg-6.text-center
+                .section-title
+                    h1 Deals of the Week
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        | magna aliqua.
+        .row
+            .col-lg-9
+                .row
+                    .col-lg-4.col-md-4.col-sm-6.mb-20
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r1.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6.mb-20
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r2.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6.mb-20
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r3.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6.mb-20
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r5.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6.mb-20
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r6.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6.mb-20
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r7.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r9.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r10.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+                    .col-lg-4.col-md-4.col-sm-6
+                        .single-related-product.d-flex
+                            a(href='#')
+                                img(src='img/r11.jpg' alt='')
+                            .desc
+                                a.title(href='#') Black lace Heels
+                                .price
+                                    h6 $189.00
+                                    h6.l-through $210.00
+            .col-lg-3
+                .ctg-right
+                    a(href='#' target='_blank')
+                        img.img-fluid.d-block.mx-auto(src='img/category/c5.jpg' alt='')
+// End related-product Area
+// start footer Area
+footer.footer-area.section_gap
+    .container
+        .row
+            .col-lg-3.col-md-6.col-sm-6
+                .single-footer-widget
+                    h6 About Us
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+                        | magna aliqua.
+            .col-lg-4.col-md-6.col-sm-6
+                .single-footer-widget
+                    h6 Newsletter
+                    p Stay update with our latest
+                    #mc_embed_signup
+                        form.form-inline(target='_blank' novalidate='true' action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01' method='get')
+                            .d-flex.flex-row
+                                input.form-control(name='EMAIL' placeholder='Enter Email' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required='' type='email')
+                                button.click-btn.btn.btn-default
+                                    i.fa.fa-long-arrow-right(aria-hidden='true')
+                                div(style='position: absolute; left: -5000px;')
+                                    input(name='b_36c4fd991d266f23781ded980_aefe40901a' tabindex='-1' value='' type='text')
+                                //
+                                    <div class="col-lg-4 col-md-4">
+                                    <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+                                    </div>
+                            .info
+            .col-lg-3.col-md-6.col-sm-6
+                .single-footer-widget.mail-chimp
+                    h6.mb-20 Instragram Feed
+                    ul.instafeed.d-flex.flex-wrap
+                        li
+                            img(src='img/i1.jpg' alt='')
+                        li
+                            img(src='img/i2.jpg' alt='')
+                        li
+                            img(src='img/i3.jpg' alt='')
+                        li
+                            img(src='img/i4.jpg' alt='')
+                        li
+                            img(src='img/i5.jpg' alt='')
+                        li
+                            img(src='img/i6.jpg' alt='')
+                        li
+                            img(src='img/i7.jpg' alt='')
+                        li
+                            img(src='img/i8.jpg' alt='')
+            .col-lg-2.col-md-6.col-sm-6
+                .single-footer-widget
+                    h6 Follow Us
+                    p Let us be social
+                    .footer-social.d-flex.align-items-center
+                        a(href='#')
+                            i.fa.fa-facebook
+                        a(href='#')
+                            i.fa.fa-twitter
+                        a(href='#')
+                            i.fa.fa-dribbble
+                        a(href='#')
+                            i.fa.fa-behance
+        .footer-bottom.d-flex.justify-content-center.align-items-center.flex-wrap
+            p.footer-text.m-0
+                // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                | Copyright &copy;
+                script.
+                    document.write(new Date().getFullYear());
+                |  All rights reserved | This template is made with 
+                i.fa.fa-heart-o(aria-hidden='true')
+                |  by 
+                a(href='https://colorlib.com' target='_blank') Colorlib
+                // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+// End footer Area
+script(src='js/vendor/jquery-2.2.4.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js' integrity='sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4' crossorigin='anonymous')
+script(src='js/vendor/bootstrap.min.js')
+script(src='js/jquery.ajaxchimp.min.js')
+script(src='js/jquery.nice-select.min.js')
+script(src='js/jquery.sticky.js')
+script(src='js/nouislider.min.js')
+script(src='js/jquery.magnific-popup.min.js')
+script(src='js/owl.carousel.min.js')
+// gmaps Js
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE')
+script(src='js/gmaps.min.js')
+script(src='js/main.js')

@@ -7,7 +7,7 @@ const AppError = require('./../utils/AppError');
 // 3) Render that template using tour data from 1)
 
 module.exports.getOverview = catchAsync(async (req, res, next) => {
-	res.status(200).render('overview', {
+	res.status(200).render('index', {
 		title: 'Overview',
 	});
 });
