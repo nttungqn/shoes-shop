@@ -1,0 +1,229 @@
+extends base
+
+block content
+    .breadcrumbs
+        .container
+            .row
+                .col
+                    p.bread
+                        span
+                            a(href='index.html') Home
+                        |  / 
+                        span Women
+    .breadcrumbs-two
+        .container
+            .row
+                .col
+                    .breadcrumbs-img(style='background-image: url(/images/cover-img-1.jpg);')
+                        h2 Nike
+                    .menu.text-center
+                        p
+                            a(href='#') New Arrivals
+                            a(href='#') Best Sellers
+                            a(href='#') Extended Widths
+                            a(href='#') Sale
+    //- .colorlib-featured
+        .container
+            .row
+                .col-sm-4.text-center
+                    .featured
+                        .featured-img.featured-img-2(style='background-image: url(/images/img_bg_2.jpg);')
+                            h2 Casuals
+                            p
+                                a.btn.btn-primary.btn-lg(href='#') Shop now
+                .col-sm-4.text-center
+                    .featured
+                        .featured-img.featured-img-2(style='background-image: url(/images/women.jpg);')
+                            h2 Dress
+                            p
+                                a.btn.btn-primary.btn-lg(href='#') Shop now
+                .col-sm-4.text-center
+                    .featured
+                        .featured-img.featured-img-2(style='background-image: url(/images/item-11.jpg);')
+                            h2 Sports
+                            p
+                                a.btn.btn-primary.btn-lg(href='#') Shop now
+    .colorlib-product
+        .container
+            .row
+                .col-lg-3.col-xl-3
+                    .row
+                        .col-sm-12
+                            .side.border.mb-1
+                                h3 Brand
+                                ul
+                                    li
+                                        a(href='#') Nike
+                                    li
+                                        a(href='#') Adidas
+                                    li
+                                        a(href='#') Vans
+                                    li
+                                        a(href='#') Puma
+                        .col-sm-12
+                            .side.border.mb-1
+                                h3 Price
+                                    .multirange 
+                                        .row
+                                            .col-12
+                                                #slider-range
+                                        .row.slider-labels
+                                            .col-6.caption
+                                                strong Min:
+                                                span#slider-range-value1
+                                            .col-6.text-right.caption
+                                                strong Max:
+                                                span#slider-range-value2
+                                        .row
+                                            .col
+                                                form
+                                                    input(type='hidden' name='min-value' value='')
+                                                    input(type='hidden' name='max-value' value='')
+
+                        .col-sm-12
+                            .side.border.mb-1
+                                h3 Size/Width
+                                .block-26.mb-2
+                                    h4 Size
+                                    ul
+                                        li
+                                            a(href='#') 7
+                                        li
+                                            a(href='#') 7.5
+                                        li
+                                            a(href='#') 8
+                                        li
+                                            a(href='#') 8.5
+                                        li
+                                            a(href='#') 9
+                                        li
+                                            a(href='#') 9.5
+                                        li
+                                            a(href='#') 10
+                                        li
+                                            a(href='#') 10.5
+                                        li
+                                            a(href='#') 11
+                                        li
+                                            a(href='#') 11.5
+                                        li
+                                            a(href='#') 12
+                                        li
+                                            a(href='#') 12.5
+                                        li
+                                            a(href='#') 13
+                                        li
+                                            a(href='#') 13.5
+                                        li
+                                            a(href='#') 14
+                                //.block-26
+                                    h4 Width
+                                    ul
+                                        li
+                                            a(href='#') M
+                                        li
+                                            a(href='#') W
+                        // .col-sm-12
+                            .side.border.mb-1
+                                h3 Style
+                                ul
+                                    li
+                                        a(href='#') Slip Ons
+                                    li
+                                        a(href='#') Boots
+                                    li
+                                        a(href='#') Sandals
+                                    li
+                                        a(href='#') Lace Ups
+                                    li
+                                        a(href='#') Oxfords
+                        // .col-sm-12
+                            .side.border.mb-1
+                                h3 Colors
+                                ul
+                                    li
+                                        a(href='#') Black
+                                    li
+                                        a(href='#') White
+                                    li
+                                        a(href='#') Blue
+                                    li
+                                        a(href='#') Red
+                                    li
+                                        a(href='#') Green
+                                    li
+                                        a(href='#') Grey
+                                    li
+                                        a(href='#') Orange
+                                    li
+                                        a(href='#') Cream
+                                    li
+                                        a(href='#') Brown
+                        // .col-sm-12
+                            .side.border.mb-1
+                                h3 Material
+                                ul
+                                    li
+                                        a(href='#') Leather
+                                    li
+                                        a(href='#') Suede
+                        // .col-sm-12
+                            .side.border.mb-1
+                                h3 Technologies
+                                ul
+                                    li
+                                        a(href='#') BioBevel
+                                    li
+                                        a(href='#') Groove
+                                    li
+                                        a(href='#') FlexBevel
+
+                
+                .col-lg-9.col-xl-9
+                    .row.row-pb-md
+                        each product in products
+                            .col-lg-4.mb-4.text-center
+                                .product-entry.border
+                                    a.prod-img(href=`/products/${product.slug}`)
+                                        img.img-fluid(src=`/images/products/${product.imageCover}` alt=`${product.name}`)
+                                    .desc
+                                        h2
+                                            a(href=`/${product.slug}`)= `${product.name}`
+                                        span.price= `$${product.price}`
+                    .row
+                        .col-md-12.text-center
+                            .block-27
+                                ul
+                                    li
+                                        a(href='#')
+                                            i.ion-ios-arrow-back
+                                    li.active
+                                        span 1
+                                    li
+                                        a(href='#') 2
+                                    li
+                                        a(href='#') 3
+                                    li
+                                        a(href='#') 4
+                                    li
+                                        a(href='#') 5
+                                    li
+                                        a(href='#')
+                                            i.ion-ios-arrow-forward
+    .colorlib-partner
+        .container
+            .row
+                .col-sm-8.offset-sm-2.text-center.colorlib-heading.colorlib-heading-sm
+                    h2 Trusted Partners
+            .row
+                .col.partner-col.text-center
+                    img.img-fluid(src='/images/brand-1.jpg' alt='Free html4 bootstrap 4 template')
+                .col.partner-col.text-center
+                    img.img-fluid(src='/images/brand-2.jpg' alt='Free html4 bootstrap 4 template')
+                .col.partner-col.text-center
+                    img.img-fluid(src='/images/brand-3.jpg' alt='Free html4 bootstrap 4 template')
+                .col.partner-col.text-center
+                    img.img-fluid(src='/images/brand-4.jpg' alt='Free html4 bootstrap 4 template')
+                .col.partner-col.text-center
+                    img.img-fluid(src='/images/brand-5.jpg' alt='Free html4 bootstrap 4 template')
+        

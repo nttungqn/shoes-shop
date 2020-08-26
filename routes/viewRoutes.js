@@ -8,6 +8,6 @@ router.get('/', viewController.getOverview);
 
 router.get('/category', viewController.getShopCategory);
 
-router.get('/single-product', viewController.getDetailProduct);
+router.get('/products/:slug', viewController.getDetailProduct);
 
 module.exports = router;

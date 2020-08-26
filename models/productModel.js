@@ -1,6 +1,7 @@
 /** @format */
 
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 
 const productSchema = new mongoose.Schema(
 	{
@@ -12,6 +13,7 @@ const productSchema = new mongoose.Schema(
 			maxlength: [40, 'A shoes name must have less or equal than 40 characters'],
 			minlength: [3, 'A shoes name must have more or equal than 6 characters'],
 		},
+		slug: String,
 		ratingsAverage: {
 			type: Number,
 			default: 4.5,
@@ -47,6 +49,11 @@ const productSchema = new mongoose.Schema(
 		toObject: { virtuals: true },
 	}
 );
+
+productSchema.pre('save', function (next) {
+	this.slug = slugify(this.name, { lower: true });
+	next();
+});
 
 const Product = mongoose.model('Product', productSchema, 'products');
 
