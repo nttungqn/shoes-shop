@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const userRouter = require('./routes/userRoutes');
-const shoesRouter = require('./routes/shoesRoutes');
+const productRouter = require('./routes/productRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const AppError = require('./utils/AppError');
 
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/', viewRouter);
-app.use('/api/shoes/', shoesRouter);
+app.use('/api/products/', productRouter);
 app.use('/api/users/', userRouter);
 
 app.all('*', (req, res, next) => {

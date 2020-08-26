@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-const shoesSchema = new mongoose.Schema(
+const productSchema = new mongoose.Schema(
 	{
 		name: {
 			type: String,
@@ -23,28 +23,24 @@ const shoesSchema = new mongoose.Schema(
 			type: Number,
 			default: 0,
 		},
+		size: {
+			type: [Number],
+			required: true,
+		},
 		price: {
 			type: Number,
 			required: [true, 'A shoes must have a price'],
 		},
-		// priceDiscount: {
-		// 	type: Number,
-		// 	validate: {
-		// 		validator: function (val) {
-		// 			// this only points to current doc on NEW document creation
-		// 			return val < this.price;
-		// 		},
-		// 		message: 'Dicount price ({VALUE}) should be blow regular price)',
-		// 	},
-		// },
-		description: {
-			type: String,
-			trim: true,
-		},
+		description: [String],
 		imageCover: {
 			type: String,
 			required: [true, 'A shoes must have a image cover'],
 		},
+		brand: {
+			type: String,
+			default: 'Nike',
+		},
+		images: [String],
 	},
 	{
 		toJSON: { virtuals: true },
@@ -52,6 +48,6 @@ const shoesSchema = new mongoose.Schema(
 	}
 );
 
-const Shoes = mongoose.model('Shoes', shoesSchema, 'shoes');
+const Product = mongoose.model('Product', productSchema, 'products');
 
-module.exports = Shoes;
+module.exports = Product;
