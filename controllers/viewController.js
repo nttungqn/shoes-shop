@@ -36,3 +36,21 @@ module.exports.getDetailProduct = catchAsync(async (req, res, next) => {
 		product,
 	});
 });
+
+module.exports.getLoginForm = catchAsync(async (req, res, next) => {
+	res.status(200).render('login', {
+		title: 'Login',
+	});
+});
+
+module.exports.getRegisterForm = catchAsync(async (req, res, next) => {
+	res.status(200).render('register', {
+		title: 'Register',
+	});
+});
+
+module.exports.getForgotPasswordForm = catchAsync(async (req, res, next) => {
+	res.status(200).render('forgot-password', {
+		title: 'Forgot Password',
+	});
+});

@@ -10,4 +10,10 @@ router.get('/category', viewController.getShopCategory);
 
 router.get('/products/:slug', viewController.getDetailProduct);
 
+router.get('/login', viewController.getLoginForm);
+
+router.get('/forgot-password', viewController.getForgotPasswordForm);
+
+router.get('/register', viewController.getRegisterForm);
+
 module.exports = router;

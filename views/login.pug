@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  title Login - Brand
+  link(rel='stylesheet' href='/form/assets/bootstrap/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+  link(rel='stylesheet' href='/form/assets/fonts/fontawesome-all.min.css')
+.container
+  .row.justify-content-center
+    .col-md-9.col-lg-12.col-xl-10
+      .card.shadow-lg.o-hidden.border-0.my-5
+        .card-body.p-0
+          .row
+            .col-lg-6.d-none.d-lg-flex
+              .flex-grow-1.bg-login-image(style='background-image: url("/form/assets/img/dogs/image3.jpeg");')
+            .col-lg-6
+              .p-3
+                .text-center
+                  h4.text-dark.mb-4 Welcome Back!
+                form.user
+                  .form-group
+                    input#exampleInputEmail.form-control.form-control-user(type='email' aria-describedby='emailHelp' placeholder='Enter Email Address...' name='email')
+                  .form-group
+                    input#exampleInputPassword.form-control.form-control-user(type='password' placeholder='Password' name='password')
+                  .form-group
+                    .custom-control.custom-checkbox.small
+                      .form-check
+                        input#formCheck-1.form-check-input.custom-control-input(type='checkbox')
+                        label.form-check-label.custom-control-label(for='formCheck-1') Remember Me
+                  button.btn.btn-primary.btn-block.text-white.btn-user(type='submit') Login
+                //-   hr
+                //-   a.btn.btn-primary.btn-block.text-white.btn-google.btn-user(role='button')
+                //-     i.fab.fa-google
+                //-     | &nbsp; Login with Google
+                //-   a.btn.btn-primary.btn-block.text-white.btn-facebook.btn-user(role='button')
+                //-     i.fab.fa-facebook-f
+                //-     | &nbsp; Login with Facebook
+                //-   hr
+                .text-center
+                  a.small(href='forgot-password') Forgot Password?
+                .text-center
+                  a.small(href='register') Create an Account!
+script(src='/form/assets/js/jquery.min.js')
+script(src='/form/assets/bootstrap/js/bootstrap.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js')
+script(src='/form/assets/js/theme.js')
