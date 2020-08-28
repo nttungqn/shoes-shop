@@ -81,12 +81,12 @@
 }
 
 .noUi-horizontal .noUi-handle {
-	width: 18px;
-	height: 18px;
+	width: 15px;
+	height: 15px;
 	border-radius: 50%;
 	left: -7px;
 	top: -7px;
-	background-color: #345dbb;
+	background-color: #658ae0;
 }
 
 /* Styling;
@@ -96,7 +96,7 @@
 }
 
 .noUi-connect {
-	background: #345dbb;
+	background: #6c8bd3;
 	-webkit-transition: background 450ms;
 	transition: background 450ms;
 }
@@ -131,7 +131,7 @@
 
 .noUi-handle:active {
 	border: 8px solid #345dbb;
-	border: 8px solid rgba(53, 93, 187, 0.38);
+	border: 8px solid rgba(150, 180, 250, 0.38);
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
 	left: -14px;
@@ -142,7 +142,7 @@
    */
 [disabled].noUi-connect,
 [disabled] .noUi-connect {
-	background: #b8b8b8;
+	background: #cccccc;
 }
 
 [disabled].noUi-origin,

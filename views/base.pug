@@ -26,26 +26,11 @@ html
             link(rel='stylesheet' href='/css/bootstrap-datepicker.css')
             // Flaticons
             link(rel='stylesheet' href='fonts/flaticon/font/flaticon.css')
-            // Multi range
-            link(rel='stylesheet' href='/css/multirange.css')
             
             // Theme style
             link(rel='stylesheet' href='/css/style.css')
-    body
-        .colorlib-loader
-        #page
-            // HEADER
-            include _header
-
-            // CONTENT
-            block content
-
-            // FOOTER
-            include _footer
-        .gototop.js-top
-            a.js-gotop(href='#')
-                i.ion-ios-arrow-up
-
+        
+        block scripts
             // script
             script(src='/js/jquery.min.js')
             // popper
@@ -67,6 +52,22 @@ html
             script(src='/js/bootstrap-datepicker.js')
             // Stellar Parallax
             script(src='/js/jquery.stellar.min.js')
-            // Main
             script(src='/js/product-detail.js')
+            // Main
             script(src='/js/main.js')
+    body
+        .colorlib-loader
+        #page
+            // HEADER
+            include _header
+
+            // CONTENT
+            block content
+
+            // FOOTER
+            include _footer
+        .gototop.js-top
+            a.js-gotop(href='#')
+                i.ion-ios-arrow-up
+
+            

@@ -1,5 +1,11 @@
 extends base
 
+block append head
+    // Multi range
+    link(rel='stylesheet' href='/css/multirange.css')
+    script(src='/js/multirange.js')
+    
+
 block content
     .breadcrumbs
         .container
@@ -7,9 +13,9 @@ block content
                 .col
                     p.bread
                         span
-                            a(href='index.html') Home
+                            a(href='/') Home
                         |  / 
-                        span Women
+                        span Shop
     .breadcrumbs-two
         .container
             .row
@@ -178,8 +184,17 @@ block content
                                     li
                                         a(href='#') FlexBevel
 
-                
+
                 .col-lg-9.col-xl-9
+                    .row.row-pb-sm
+                        .col-sm-4
+                            .form-group
+                                h5 SORT BY
+                                .form-field
+                                    select#sort.form-control(name='sort')
+                                        option(value='#') Default
+                                        option(value='#') Price: High-Low
+                                        option(value='#') Price: Low-High
                     .row.row-pb-md
                         each product in products
                             .col-lg-4.mb-4.text-center
@@ -194,22 +209,26 @@ block content
                         .col-md-12.text-center
                             .block-27
                                 ul
-                                    li
-                                        a(href='#')
-                                            i.ion-ios-arrow-back
+                                    // check previous page
+                                    if currentPage !== 1  
+                                        li
+                                            a(href=`/shop?page=${currentPage-1}`)
+                                                i.ion-ios-arrow-back
+                                    
+                                    if  currentPage - 1 > 0
+                                        li
+                                            a(href=`/shop?page=${currentPage-1}`) #{currentPage - 1}
                                     li.active
-                                        span 1
-                                    li
-                                        a(href='#') 2
-                                    li
-                                        a(href='#') 3
-                                    li
-                                        a(href='#') 4
-                                    li
-                                        a(href='#') 5
-                                    li
-                                        a(href='#')
-                                            i.ion-ios-arrow-forward
+                                        a(href=`/shop?page=${currentPage}`) #{currentPage}
+                                        
+                                    if currentPage + 1 <= lastPage
+                                        li
+                                            a(href=`/shop?page=${currentPage + 1}`) #{currentPage+1}
+
+                                    if currentPage < lastPage
+                                        li
+                                            a(href=`/shop?page=${currentPage+1}`)
+                                                i.ion-ios-arrow-forward
     .colorlib-partner
         .container
             .row
@@ -226,4 +245,4 @@ block content
                     img.img-fluid(src='/images/brand-4.jpg' alt='Free html4 bootstrap 4 template')
                 .col.partner-col.text-center
                     img.img-fluid(src='/images/brand-5.jpg' alt='Free html4 bootstrap 4 template')
-        
+

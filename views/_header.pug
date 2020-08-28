@@ -4,7 +4,7 @@ nav.colorlib-nav(role='navigation')
             .row
                 .col-sm-7.col-md-9
                     #colorlib-logo
-                        a(href='index.html') Footwear
+                        a(href='/') Footwear
                 .col-sm-5.col-md-3
                     form.search-wrap(action='#')
                         .form-group
@@ -15,30 +15,26 @@ nav.colorlib-nav(role='navigation')
                 .col-sm-12.text-left.menu-1
                     ul
                         li.active
-                            a(href='index.html') Home
-                        li.has-dropdown
-                            a(href='men.html') Men
-                            ul.dropdown
-                                li
-                                    a(href='product-detail.html') Product Detail
-                                li
-                                    a(href='cart.html') Shopping Cart
-                                li
-                                    a(href='checkout.html') Checkout
-                                li
-                                    a(href='order-complete.html') Order Complete
-                                li
-                                    a(href='add-to-wishlist.html') Wishlist
+                            a(href='/') Home
                         li
-                            a(href='women.html') Women
+                            a(href='/shop') Shop
                         li
-                            a(href='about.html') About
+                            a(href='about') About
                         li
-                            a(href='contact.html') Contact
-                        li.cart
-                            a(href='cart.html')
-                                i.icon-shopping-cart
-                                |  Cart [0]
+                            a(href='contact') Contact
+                        if user
+                            li.cart
+                                a(href='cart')
+                                    i.icon-shopping-cart
+                                    |  Cart [0]
+                        else
+                            li.cart
+                                a(href='/login') Login
+                                | &frasl;
+                                a(href='/register') Register
+                          
+                               
+                            
     .sale
         .container
             .row

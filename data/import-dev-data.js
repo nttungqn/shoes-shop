@@ -19,7 +19,7 @@ mongoose
 	.then(() => console.log('DB connection successful!'));
 
 // READ JSON FILE
-const products = JSON.parse(fs.readFileSync(`${__dirname}/products.json`, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(`${__dirname}/products-f.json`, 'utf-8'));
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
 
 // IMPORT DATA INTO DB

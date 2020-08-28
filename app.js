@@ -3,6 +3,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const compression = require('compression');
+const morgan = require('morgan');
 const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
 const viewRouter = require('./routes/viewRoutes');
@@ -22,6 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
+
+app.use(morgan('dev'));
+
+app.use(compression());
 
 app.use('/', viewRouter);
 app.use('/api/products/', productRouter);
