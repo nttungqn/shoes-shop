@@ -18,9 +18,22 @@ module.exports.getOverview = catchAsync(async (req, res, next) => {
 module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 	let { page, sortBy, orderBy } = req.query;
 	page = page !== undefined ? parseInt(page) : 1;
+
+	// 0 mean sort defaults
+	// 1 mean sort by name order by A -> Z
+	// 2 name: Z - > A
+	// 3 price: Low to High
+	// 4 price: High to Low
+	let selectedSort = 0;
+
 	let sort;
-	if (sortBy === 'name') sort = 'name';
-	else if (sortBy === 'price') sort = { price: orderBy };
+	if (sortBy === 'name') {
+		sort = { name: orderBy };
+		selectedSort = orderBy === 'asc' ? 1 : 2;
+	} else if (sortBy === 'price') {
+		sort = { price: orderBy };
+		selectedSort = orderBy === 'asc' ? 3 : 4;
+	}
 
 	let limit = parseInt(req.query.limit || process.env.ITEMS_ON_PAGE);
 	let skip = (parseInt(req.query.page || 1) - 1) * limit;
@@ -32,12 +45,13 @@ module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 	const allProducts = await Product.find();
 	let lastPage = Math.ceil(allProducts.length / limit);
 
-	res.status(200).render('shop', {
+	res.status(200).render('products', {
 		title: 'Shop Category',
 		products,
 		numberItems: limit,
 		lastPage,
 		currentPage: page,
+		selectedSort,
 	});
 });
 

@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', viewController.getOverview);
 
-router.get('/shop', viewController.getShopCategory);
+router.get('/products', viewController.getShopCategory);
 
 router.get('/products/:slug', viewController.getDetailProduct);
 
