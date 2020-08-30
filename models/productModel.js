@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema(
 			trim: true,
 			required: [true, 'A shoes must have a name'],
 			unique: true,
-			maxlength: [40, 'A shoes name must have less or equal than 40 characters'],
+			maxlength: [50, 'A shoes name must have less or equal than 50 characters'],
 			minlength: [3, 'A shoes name must have more or equal than 6 characters'],
 		},
 		slug: String,
@@ -26,7 +26,7 @@ const productSchema = new mongoose.Schema(
 			default: 0,
 		},
 		size: {
-			type: [Number],
+			type: [String],
 			required: true,
 		},
 		price: {

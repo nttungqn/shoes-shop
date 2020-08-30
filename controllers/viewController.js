@@ -16,7 +16,7 @@ module.exports.getOverview = catchAsync(async (req, res, next) => {
 });
 
 module.exports.getShopCategory = catchAsync(async (req, res, next) => {
-	let { page, sortBy, orderBy } = req.query;
+	let { page, sortBy, orderBy, brand, size, priceFrom, priceTo } = req.query;
 	page = page !== undefined ? parseInt(page) : 1;
 
 	// 0 mean sort defaults
@@ -38,10 +38,20 @@ module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 	let limit = parseInt(req.query.limit || process.env.ITEMS_ON_PAGE);
 	let skip = (parseInt(req.query.page || 1) - 1) * limit;
 
-	const products =
-		sort !== undefined
-			? await Product.find().sort(sort).limit(limit).skip(skip)
-			: await Product.find().limit(limit).skip(skip);
+	brand = brand !== undefined ? brand : '';
+	size = size !== undefined ? size : 0;
+	priceFrom = priceFrom !== undefined ? priceFrom : 0;
+	priceTo = priceTo !== undefined ? priceTo : 9999;
+
+	const products = await Product.find({
+		brand: new RegExp(brand, 'i'),
+		size: new RegExp(size, 'i'),
+		price: { $gt: priceFrom, $lt: priceTo },
+	})
+		.sort(sort)
+		.limit(limit)
+		.skip(skip);
+
 	const allProducts = await Product.find();
 	let lastPage = Math.ceil(allProducts.length / limit);
 

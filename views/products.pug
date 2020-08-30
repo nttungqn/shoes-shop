@@ -1,14 +1,8 @@
 extends base
 
-block append head
-    // Multi range
-    link(rel='stylesheet' href='/css/multirange.css')
-
 block append scripts
-    script(src='/js/multirange.js')
     script(src='/js/products.js')
     
-
 block content
     .breadcrumbs
         .container
@@ -62,69 +56,38 @@ block content
                                 h3 Brand
                                 ul
                                     li
-                                        a(href='#') Nike
+                                        a(href='?brand=Nike') Nike
                                     li
-                                        a(href='#') Adidas
+                                        a(href='?brand=Adidas') Adidas
                                     li
-                                        a(href='#') Vans
+                                        a(href='?brand=Vans') Vans
                                     li
-                                        a(href='#') Puma
+                                        a(href='?brand=Puma') Puma
                         .col-sm-12
                             .side.border.mb-1
                                 h3 Price
-                                    .multirange 
-                                        .row
-                                            .col-12
-                                                #slider-range
-                                        .row.slider-labels
-                                            .col-6.caption
-                                                strong Min:
-                                                span#slider-range-value1
-                                            .col-6.text-right.caption
-                                                strong Max:
-                                                span#slider-range-value2
-                                        .row
-                                            .col
-                                                form
-                                                    input(type='hidden' name='min-value' value='')
-                                                    input(type='hidden' name='max-value' value='')
+                                ul
+                                    li
+                                        a(href='?priceFrom=0&priceTo=25') Under $25
+                                    li
+                                        a(href='?priceFrom=25&priceTo=50') $25 to $50
+                                    li
+                                        a(href='?priceFrom=50&priceTo=100') $50 to $100
+                                    li
+                                        a(href='?priceFrom=100&priceTo=200') $100 to $200
+                                    li
+                                        a(href='?priceFrom=200&priceTo=1000') $200 & Above
 
                         .col-sm-12
                             .side.border.mb-1
                                 h3 Size/Width
                                 .block-26.mb-2
                                     h4 Size
+                                        - var n = 30;
                                     ul
-                                        li
-                                            a(href='#') 7
-                                        li
-                                            a(href='#') 7.5
-                                        li
-                                            a(href='#') 8
-                                        li
-                                            a(href='#') 8.5
-                                        li
-                                            a(href='#') 9
-                                        li
-                                            a(href='#') 9.5
-                                        li
-                                            a(href='#') 10
-                                        li
-                                            a(href='#') 10.5
-                                        li
-                                            a(href='#') 11
-                                        li
-                                            a(href='#') 11.5
-                                        li
-                                            a(href='#') 12
-                                        li
-                                            a(href='#') 12.5
-                                        li
-                                            a(href='#') 13
-                                        li
-                                            a(href='#') 13.5
-                                        li
-                                            a(href='#') 14
+                                        while n < 42
+                                            li
+                                                a(href=`?size=${n}`) #{n++}
                                 //.block-26
                                     h4 Width
                                     ul
@@ -195,9 +158,9 @@ block content
                                 h5 SORT BY
                                 .form-field
                                     select#sort.form-control(onchange='location = this.value;')
-                                        option(value='/' selected = selectedSort == 0) Default
+                                        option(value='' selected = selectedSort == 0) Default
                                         option(value='?sortBy=name&orderBy=asc' selected = selectedSort == 1) Name: A - Z
-                                        option(value='/?sortBy=name&orderBy=desc' selected = selectedSort == 2) Name: Z - A
+                                        option(value='?sortBy=name&orderBy=desc' selected = selectedSort == 2) Name: Z - A
                                         option(value='?sortBy=price&orderBy=asc' selected = selectedSort == 3) Price: Low - High
                                         option(value='?sortBy=price&orderBy=desc' selected = selectedSort == 4) Price: High - Low
                     .row.row-pb-md

@@ -1,452 +1,502 @@
 [
 	{
-		"name": "potenti cras in",
-		"price": 105.56,
+		"name": "eu sapien cursus vestibulum proin",
+		"price": 82.06,
+		"imageCover": "pic7.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 23,
+		"ratingsAverage": 4.6,
+		"description": "volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "varius integer ac leo pellentesque",
+		"price": 113.12,
+		"imageCover": "pic8.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 40,
+		"ratingsAverage": 3.1,
+		"description": "in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "tellus nisi eu orci",
+		"price": 131.66,
+		"imageCover": "pic3.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 44,
+		"ratingsAverage": 3.5,
+		"description": "fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "pede lobortis ligula sit",
+		"price": 123.06,
+		"imageCover": "pic4.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 80,
+		"ratingsAverage": 4.1,
+		"description": "sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "ipsum praesent blandit lacinia",
+		"price": 127.88,
 		"imageCover": "pic2.jpg",
 		"brand": "Adidas",
-		"ratingsQuantity": 69,
-		"ratingsAverage": 4.9,
-		"description": "et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium"
-	},
-	{
-		"name": "libero non mattis pulvinar",
-		"price": 119.36,
-		"imageCover": "pic8.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 51,
-		"ratingsAverage": 3.3,
-		"description": "ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede"
-	},
-	{
-		"name": "dolor sit amet",
-		"price": 53.69,
-		"imageCover": "pic4.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 65,
-		"ratingsAverage": 3.4,
-		"description": "tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros"
-	},
-	{
-		"name": "ut massa volutpat",
-		"price": 146.37,
-		"imageCover": "pic1.jpg",
-		"brand": "Adidas",
-		"ratingsQuantity": 67,
+		"ratingsQuantity": 64,
 		"ratingsAverage": 4.7,
-		"description": "eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis"
+		"description": "sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "ornare imperdiet sapien urna",
-		"price": 80.06,
-		"imageCover": "pic5.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 23,
-		"ratingsAverage": 3.8,
-		"description": "mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla"
-	},
-	{
-		"name": "orci luctus et ultrices",
-		"price": 127.65,
-		"imageCover": "pic4.jpg",
-		"brand": "Adidas",
-		"ratingsQuantity": 93,
-		"ratingsAverage": 5.0,
-		"description": "vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id"
-	},
-	{
-		"name": "proin interdum mauris",
-		"price": 67.96,
-		"imageCover": "pic4.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 35,
-		"ratingsAverage": 4.9,
-		"description": "massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst"
-	},
-	{
-		"name": "maecenas ut massa quis augue",
-		"price": 143.23,
-		"imageCover": "pic9.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 18,
-		"ratingsAverage": 3.9,
-		"description": "sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla"
-	},
-	{
-		"name": "diam id ornare imperdiet sapien",
-		"price": 54.16,
+		"name": "id sapien in sapien iaculis",
+		"price": 132.12,
 		"imageCover": "pic4.jpg",
 		"brand": "Nike",
-		"ratingsQuantity": 39,
-		"ratingsAverage": 3.6,
-		"description": "sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla"
-	},
-	{
-		"name": "scelerisque mauris sit amet eros",
-		"price": 115.49,
-		"imageCover": "pic7.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 35,
-		"ratingsAverage": 4.6,
-		"description": "lobortis sapien sapien non mi integer ac neque duis bibendum morbi non"
+		"ratingsQuantity": 67,
+		"ratingsAverage": 4.5,
+		"description": "tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et",
+		"size": ["38", "39", "40"]
 	},
 	{
 		"name": "sapien quis libero nullam",
-		"price": 70.85,
-		"imageCover": "pic4.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 25,
-		"ratingsAverage": 3.9,
-		"description": "vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat"
-	},
-	{
-		"name": "rutrum ac lobortis vel dapibus",
-		"price": 69.33,
+		"price": 148.47,
 		"imageCover": "pic10.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 63,
-		"ratingsAverage": 4.5,
-		"description": "sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate"
-	},
-	{
-		"name": "quis tortor id nulla",
-		"price": 82.57,
-		"imageCover": "pic4.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 41,
-		"ratingsAverage": 4.8,
-		"description": "pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris"
-	},
-	{
-		"name": "donec ut mauris eget massa",
-		"price": 91.87,
-		"imageCover": "pic6.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 31,
-		"ratingsAverage": 4.0,
-		"description": "nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque"
-	},
-	{
-		"name": "et eros vestibulum ac",
-		"price": 62.62,
-		"imageCover": "pic7.jpg",
 		"brand": "Adidas",
-		"ratingsQuantity": 88,
-		"ratingsAverage": 4.7,
-		"description": "malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem"
-	},
-	{
-		"name": "amet justo morbi ut odio",
-		"price": 75.73,
-		"imageCover": "pic2.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 19,
-		"ratingsAverage": 5.0,
-		"description": "nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt"
-	},
-	{
-		"name": "nisl ut volutpat sapien",
-		"price": 100.29,
-		"imageCover": "pic8.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 56,
-		"ratingsAverage": 3.6,
-		"description": "fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis"
-	},
-	{
-		"name": "arcu adipiscing molestie hendrerit at",
-		"price": 131.42,
-		"imageCover": "pic4.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 52,
-		"ratingsAverage": 4.2,
-		"description": "ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium"
-	},
-	{
-		"name": "eget eleifend luctus ultricies",
-		"price": 86.48,
-		"imageCover": "pic9.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 32,
-		"ratingsAverage": 3.2,
-		"description": "vulputate justo in blandit ultrices enim lorem ipsum dolor sit"
-	},
-	{
-		"name": "at turpis donec posuere metus",
-		"price": 71.05,
-		"imageCover": "pic7.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 28,
-		"ratingsAverage": 4.0,
-		"description": "rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus"
-	},
-	{
-		"name": "orci luctus et",
-		"price": 75.78,
-		"imageCover": "pic3.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 48,
+		"ratingsQuantity": 22,
 		"ratingsAverage": 4.3,
-		"description": "quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse"
+		"description": "duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "neque sapien placerat ante nulla",
-		"price": 83.47,
-		"imageCover": "pic2.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 69,
-		"ratingsAverage": 3.2,
-		"description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse"
-	},
-	{
-		"name": "mi nulla ac enim in",
-		"price": 77.44,
-		"imageCover": "pic8.jpg",
-		"brand": "Adidas",
-		"ratingsQuantity": 41,
-		"ratingsAverage": 3.2,
-		"description": "sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut"
-	},
-	{
-		"name": "sapien quis libero nullam sit",
-		"price": 43.58,
-		"imageCover": "pic1.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 86,
-		"ratingsAverage": 3.7,
-		"description": "luctus rutrum nulla tellus in sagittis dui vel nisl duis ac"
-	},
-	{
-		"name": "sollicitudin ut suscipit",
-		"price": 106.78,
-		"imageCover": "pic10.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 70,
-		"ratingsAverage": 4.2,
-		"description": "justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla"
-	},
-	{
-		"name": "parturient montes nascetur ridiculus",
-		"price": 35.14,
-		"imageCover": "pic3.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 12,
-		"ratingsAverage": 3.1,
-		"description": "nam congue risus semper porta volutpat quam pede lobortis ligula sit amet"
-	},
-	{
-		"name": "in faucibus orci luctus et",
-		"price": 67.58,
-		"imageCover": "pic6.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 80,
-		"ratingsAverage": 4.5,
-		"description": "maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque"
-	},
-	{
-		"name": "enim lorem ipsum",
-		"price": 126.0,
-		"imageCover": "pic2.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 69,
-		"ratingsAverage": 5.0,
-		"description": "ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam"
-	},
-	{
-		"name": "vel lectus in quam fringilla",
-		"price": 96.9,
+		"name": "at diam nam tristique",
+		"price": 30.71,
 		"imageCover": "pic9.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 81,
-		"ratingsAverage": 3.7,
-		"description": "eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit"
-	},
-	{
-		"name": "at dolor quis odio consequat",
-		"price": 101.46,
-		"imageCover": "pic2.jpg",
 		"brand": "Puma",
-		"ratingsQuantity": 48,
-		"ratingsAverage": 3.8,
-		"description": "curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec"
-	},
-	{
-		"name": "curabitur at ipsum",
-		"price": 89.1,
-		"imageCover": "pic10.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 77,
-		"ratingsAverage": 3.3,
-		"description": "suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet"
-	},
-	{
-		"name": "lorem ipsum dolor sit",
-		"price": 90.92,
-		"imageCover": "pic9.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 87,
+		"ratingsQuantity": 32,
 		"ratingsAverage": 4.6,
-		"description": "volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum"
+		"description": "vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "duis ac nibh fusce lacus",
-		"price": 136.01,
-		"imageCover": "pic8.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 54,
-		"ratingsAverage": 4.0,
-		"description": "nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi"
-	},
-	{
-		"name": "molestie lorem quisque ut erat",
-		"price": 83.51,
-		"imageCover": "pic2.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 10,
-		"ratingsAverage": 3.4,
-		"description": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat"
-	},
-	{
-		"name": "ultricies eu nibh quisque id",
-		"price": 72.95,
-		"imageCover": "pic5.jpg",
+		"name": "sed vestibulum sit amet",
+		"price": 86.98,
+		"imageCover": "pic1.jpg",
 		"brand": "Vans",
-		"ratingsQuantity": 53,
-		"ratingsAverage": 3.2,
-		"description": "potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam"
+		"ratingsQuantity": 64,
+		"ratingsAverage": 4.9,
+		"description": "vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "ut nunc vestibulum ante ipsum",
-		"price": 133.53,
-		"imageCover": "pic6.jpg",
+		"name": "praesent lectus vestibulum quam",
+		"price": 136.37,
+		"imageCover": "pic2.jpg",
 		"brand": "Adidas",
-		"ratingsQuantity": 20,
-		"ratingsAverage": 3.9,
-		"description": "nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper"
+		"ratingsQuantity": 69,
+		"ratingsAverage": 3.4,
+		"description": "viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "augue a suscipit nulla",
-		"price": 33.28,
-		"imageCover": "pic8.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 31,
+		"name": "morbi quis tortor id nulla",
+		"price": 42.72,
+		"imageCover": "pic2.jpg",
+		"brand": "Vans",
+		"ratingsQuantity": 25,
+		"ratingsAverage": 4.0,
+		"description": "neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "congue eget semper rutrum nulla",
+		"price": 42.15,
+		"imageCover": "pic4.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 69,
 		"ratingsAverage": 3.3,
-		"description": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget"
+		"description": "orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "duis faucibus accumsan",
-		"price": 80.05,
+		"name": "amet lobortis sapien sapien non",
+		"price": 49.98,
+		"imageCover": "pic5.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 74,
+		"ratingsAverage": 5.0,
+		"description": "in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "eu massa donec dapibus",
+		"price": 105.96,
+		"imageCover": "pic8.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 39,
+		"ratingsAverage": 4.0,
+		"description": "erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "semper porta volutpat quam",
+		"price": 48.03,
 		"imageCover": "pic9.jpg",
 		"brand": "Adidas",
-		"ratingsQuantity": 68,
-		"ratingsAverage": 4.8,
-		"description": "nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada"
+		"ratingsQuantity": 64,
+		"ratingsAverage": 3.3,
+		"description": "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "potenti in eleifend",
-		"price": 109.5,
-		"imageCover": "pic5.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 95,
-		"ratingsAverage": 4.1,
-		"description": "sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet"
+		"name": "scelerisque quam turpis adipiscing",
+		"price": 133.21,
+		"imageCover": "pic3.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 46,
+		"ratingsAverage": 4.4,
+		"description": "donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "parturient montes nascetur ridiculus mus",
-		"price": 37.86,
-		"imageCover": "pic5.jpg",
+		"name": "vel augue vestibulum rutrum",
+		"price": 146.14,
+		"imageCover": "pic9.jpg",
 		"brand": "Nike",
-		"ratingsQuantity": 93,
-		"ratingsAverage": 4.0,
-		"description": "in consequat ut nulla sed accumsan felis ut at dolor quis odio"
+		"ratingsQuantity": 97,
+		"ratingsAverage": 3.9,
+		"description": "consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit",
+		"size": ["38", "39", "40"]
 	},
 	{
-		"name": "et commodo vulputate",
-		"price": 124.33,
+		"name": "elit ac nulla sed",
+		"price": 69.87,
+		"imageCover": "pic7.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 32,
+		"ratingsAverage": 4.7,
+		"description": "cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "ligula suspendisse ornare consequat lectus",
+		"price": 64.09,
+		"imageCover": "pic5.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 60,
+		"ratingsAverage": 4.6,
+		"description": "sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "diam id ornare imperdiet",
+		"price": 54.0,
+		"imageCover": "pic5.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 86,
+		"ratingsAverage": 4.8,
+		"description": "quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "dapibus at diam nam tristique",
+		"price": 125.55,
 		"imageCover": "pic8.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 52,
-		"ratingsAverage": 3.4,
-		"description": "sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat"
+		"brand": "Nike",
+		"ratingsQuantity": 71,
+		"ratingsAverage": 3.0,
+		"description": "tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "risus semper porta volutpat",
+		"price": 44.84,
+		"imageCover": "pic4.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 65,
+		"ratingsAverage": 4.3,
+		"description": "felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "tellus nulla ut erat",
+		"price": 39.2,
+		"imageCover": "pic7.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 90,
+		"ratingsAverage": 4.3,
+		"description": "justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "justo sollicitudin ut suscipit a",
+		"price": 92.93,
+		"imageCover": "pic9.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 51,
+		"ratingsAverage": 3.0,
+		"description": "eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis",
+		"size": ["38", "39", "40"]
 	},
 	{
 		"name": "luctus cum sociis natoque",
-		"price": 134.55,
-		"imageCover": "pic8.jpg",
-		"brand": "Adidas",
-		"ratingsQuantity": 98,
-		"ratingsAverage": 4.4,
-		"description": "elementum pellentesque quisque porta volutpat erat quisque erat eros viverra"
-	},
-	{
-		"name": "eget semper rutrum",
-		"price": 85.9,
-		"imageCover": "pic4.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 92,
-		"ratingsAverage": 4.6,
-		"description": "turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc"
-	},
-	{
-		"name": "dolor vel est",
-		"price": 39.18,
-		"imageCover": "pic3.jpg",
-		"brand": "Puma",
-		"ratingsQuantity": 89,
-		"ratingsAverage": 4.8,
-		"description": "eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec"
-	},
-	{
-		"name": "in leo maecenas",
-		"price": 40.08,
-		"imageCover": "pic2.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 51,
-		"ratingsAverage": 4.5,
-		"description": "feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in"
-	},
-	{
-		"name": "dis parturient montes",
-		"price": 102.75,
-		"imageCover": "pic4.jpg",
-		"brand": "Adidas",
-		"ratingsQuantity": 53,
-		"ratingsAverage": 3.9,
-		"description": "elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus"
-	},
-	{
-		"name": "duis consequat dui nec nisi",
-		"price": 55.77,
-		"imageCover": "pic3.jpg",
-		"brand": "Nike",
-		"ratingsQuantity": 16,
-		"ratingsAverage": 3.1,
-		"description": "nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque"
-	},
-	{
-		"name": "vivamus metus arcu adipiscing",
-		"price": 74.56,
+		"price": 136.0,
 		"imageCover": "pic5.jpg",
 		"brand": "Nike",
-		"ratingsQuantity": 81,
-		"ratingsAverage": 3.7,
-		"description": "ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id"
-	},
-	{
-		"name": "feugiat et eros vestibulum ac",
-		"price": 112.57,
-		"imageCover": "pic8.jpg",
-		"brand": "Vans",
-		"ratingsQuantity": 14,
-		"ratingsAverage": 4.8,
-		"description": "erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus"
-	},
-	{
-		"name": "erat id mauris vulputate elementum",
-		"price": 35.11,
-		"imageCover": "pic7.jpg",
-		"brand": "Vans",
 		"ratingsQuantity": 99,
+		"ratingsAverage": 3.8,
+		"description": "quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "integer tincidunt ante vel ipsum",
+		"price": 51.05,
+		"imageCover": "pic8.jpg",
+		"brand": "Puma",
+		"ratingsQuantity": 26,
+		"ratingsAverage": 4.7,
+		"description": "purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "diam neque vestibulum eget",
+		"price": 122.52,
+		"imageCover": "pic2.jpg",
+		"brand": "Puma",
+		"ratingsQuantity": 34,
+		"ratingsAverage": 3.5,
+		"description": "lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "morbi vel lectus in",
+		"price": 114.14,
+		"imageCover": "pic4.jpg",
+		"brand": "Vans",
+		"ratingsQuantity": 50,
+		"ratingsAverage": 3.0,
+		"description": "gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "nunc commodo placerat praesent",
+		"price": 73.61,
+		"imageCover": "pic7.jpg",
+		"brand": "Puma",
+		"ratingsQuantity": 92,
+		"ratingsAverage": 4.1,
+		"description": "neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "nulla tellus in sagittis dui",
+		"price": 127.24,
+		"imageCover": "pic3.jpg",
+		"brand": "Vans",
+		"ratingsQuantity": 61,
+		"ratingsAverage": 3.6,
+		"description": "praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "pede posuere nonummy integer",
+		"price": 61.83,
+		"imageCover": "pic9.jpg",
+		"brand": "Puma",
+		"ratingsQuantity": 29,
+		"ratingsAverage": 5.0,
+		"description": "in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "erat vestibulum sed magna at",
+		"price": 98.1,
+		"imageCover": "pic1.jpg",
+		"brand": "Puma",
+		"ratingsQuantity": 41,
 		"ratingsAverage": 3.1,
-		"description": "neque aenean auctor gravida sem praesent id massa id nisl venenatis"
+		"description": "id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "donec posuere metus vitae ipsum",
+		"price": 79.88,
+		"imageCover": "pic10.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 97,
+		"ratingsAverage": 3.6,
+		"description": "arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "sit amet diam in magna",
+		"price": 34.05,
+		"imageCover": "pic4.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 49,
+		"ratingsAverage": 4.3,
+		"description": "tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "vitae ipsum aliquam non",
+		"price": 123.33,
+		"imageCover": "pic1.jpg",
+		"brand": "Puma",
+		"ratingsQuantity": 34,
+		"ratingsAverage": 3.4,
+		"description": "sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "orci luctus et ultrices",
+		"price": 126.88,
+		"imageCover": "pic2.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 85,
+		"ratingsAverage": 3.6,
+		"description": "nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "auctor sed tristique in tempus",
+		"price": 111.45,
+		"imageCover": "pic1.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 29,
+		"ratingsAverage": 4.6,
+		"description": "amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "ac neque duis bibendum",
+		"price": 116.14,
+		"imageCover": "pic6.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 30,
+		"ratingsAverage": 4.3,
+		"description": "nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "vestibulum aliquet ultrices erat tortor",
+		"price": 47.79,
+		"imageCover": "pic2.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 38,
+		"ratingsAverage": 4.5,
+		"description": "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "pretium quis lectus suspendisse potenti",
+		"price": 91.62,
+		"imageCover": "pic7.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 97,
+		"ratingsAverage": 5.0,
+		"description": "mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "ut erat id mauris",
+		"price": 69.54,
+		"imageCover": "pic7.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 29,
+		"ratingsAverage": 3.3,
+		"description": "venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "vel ipsum praesent blandit lacinia",
+		"price": 60.27,
+		"imageCover": "pic3.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 82,
+		"ratingsAverage": 4.6,
+		"description": "consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "tortor risus dapibus augue",
+		"price": 123.24,
+		"imageCover": "pic9.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 28,
+		"ratingsAverage": 3.5,
+		"description": "varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "nulla tellus in sagittis",
+		"price": 113.32,
+		"imageCover": "pic1.jpg",
+		"brand": "Vans",
+		"ratingsQuantity": 31,
+		"ratingsAverage": 3.9,
+		"description": "ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "quis tortor id nulla ultrices",
+		"price": 50.58,
+		"imageCover": "pic3.jpg",
+		"brand": "Vans",
+		"ratingsQuantity": 31,
+		"ratingsAverage": 3.1,
+		"description": "scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "tempus vel pede morbi",
+		"price": 119.99,
+		"imageCover": "pic10.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 89,
+		"ratingsAverage": 3.5,
+		"description": "commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "odio in hac habitasse platea",
+		"price": 132.51,
+		"imageCover": "pic10.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 60,
+		"ratingsAverage": 3.3,
+		"description": "accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "faucibus orci luctus et ultrices",
+		"price": 44.07,
+		"imageCover": "pic8.jpg",
+		"brand": "Adidas",
+		"ratingsQuantity": 93,
+		"ratingsAverage": 3.8,
+		"description": "potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "elit sodales scelerisque mauris sit",
+		"price": 115.07,
+		"imageCover": "pic2.jpg",
+		"brand": "Vans",
+		"ratingsQuantity": 81,
+		"ratingsAverage": 5.0,
+		"description": "aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci",
+		"size": ["38", "39", "40"]
+	},
+	{
+		"name": "in eleifend quam a odio",
+		"price": 70.42,
+		"imageCover": "pic5.jpg",
+		"brand": "Nike",
+		"ratingsQuantity": 64,
+		"ratingsAverage": 4.6,
+		"description": "turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum",
+		"size": ["38", "39", "40"]
 	}
 ]

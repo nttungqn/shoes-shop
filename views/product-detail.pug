@@ -37,6 +37,9 @@ block content
                 .col-sm-4
                     .product-desc
                         h3= `${product.name}`
+                        .size-wrap
+                            .block-26.mb-2
+                                h5 #{`Brand: ${product.brand}`}
                         p.price
                             span= `$${product.price}`
                             span.rate
@@ -59,6 +62,7 @@ block content
                                             a(href='#')= val
                                     
                         .input-group.mb-4
+                            label Quantity
                             span.input-group-btn
                                 button.quantity-left-minus.btn(type='button' data-type='minus' data-field='')
                                     i.icon-minus2
