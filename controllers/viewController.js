@@ -1,67 +1,86 @@
 /** @format */
 const catchAsync = require('./../utils/catchAsync');
+const productController = require('./../controllers/productController');
+const brandController = require('./../controllers/brandController');
+const categoryController = require('./../controllers/categoryController');
 const AppError = require('./../utils/AppError');
 const Product = require('./../models/productModel');
+const Brand = require('./../models/brandModel');
+const Color = require('./../models/colorModel');
+const Category = require('./../models/categoryModel');
 
 // 1) Get tour data from collection
 // 2) Build template
 // 3) Render that template using tour data from 1)
 
 module.exports.getOverview = catchAsync(async (req, res, next) => {
-	const products = await Product.find().limit(8);
+	const categories = await categoryController.getAll();
+	const trendingProducts = await productController.getTrendingProduct(8);
+	const bestSellerProducts = await productController.getBestSellerProduct(8);
+
 	res.status(200).render('index', {
-		title: 'Overview',
-		products,
+		categories,
+		trendingProducts,
+		bestSellerProducts,
 	});
 });
 
 module.exports.getShopCategory = catchAsync(async (req, res, next) => {
-	let { page, sortBy, orderBy, brand, size, priceFrom, priceTo } = req.query;
-	page = page !== undefined ? parseInt(page) : 1;
+	const categories = await categoryController.getAll();
+	const brands = await brandController.getAll();
+	const trendingProducts = await productController.getTrendingProduct(12);
+	const colors = await Color.find();
 
-	// 0 mean sort defaults
-	// 1 mean sort by name order by A -> Z
-	// 2 name: Z - > A
-	// 3 price: Low to High
-	// 4 price: High to Low
-	let selectedSort = 0;
-
-	let sort;
-	if (sortBy === 'name') {
-		sort = { name: orderBy };
-		selectedSort = orderBy === 'asc' ? 1 : 2;
-	} else if (sortBy === 'price') {
-		sort = { price: orderBy };
-		selectedSort = orderBy === 'asc' ? 3 : 4;
+	if (req.query.color == null || isNaN(req.query.color)) {
+		req.query.color = 0;
 	}
 
-	let limit = parseInt(req.query.limit || process.env.ITEMS_ON_PAGE);
-	let skip = (parseInt(req.query.page || 1) - 1) * limit;
+	if (req.query.brand == null || isNaN(req.query.brand)) {
+		req.query.brand = 0;
+	}
 
-	brand = brand !== undefined ? brand : '';
-	size = size !== undefined ? size : 0;
-	priceFrom = priceFrom !== undefined ? priceFrom : 0;
-	priceTo = priceTo !== undefined ? priceTo : 9999;
+	if (req.query.category == null || isNaN(req.query.category)) {
+		req.query.category = 0;
+	}
 
-	const products = await Product.find({
-		brand: new RegExp(brand, 'i'),
-		size: new RegExp(size, 'i'),
-		price: { $gt: priceFrom, $lt: priceTo },
-	})
-		.sort(sort)
-		.limit(limit)
-		.skip(skip);
+	if (req.query.min == null || isNaN(req.query.min)) {
+		req.query.min = 0;
+	}
 
-	const allProducts = await Product.find();
-	let lastPage = Math.ceil(allProducts.length / limit);
+	if (req.query.max == null || isNaN(req.query.max)) {
+		req.query.max = 150;
+	}
 
-	res.status(200).render('products', {
-		title: 'Shop Category',
+	if (req.query.sort == null) {
+		req.query.sort = 'name';
+	}
+
+	if (req.query.page == null || isNaN(req.query.page)) {
+		req.query.page = 1;
+	}
+
+	if (req.query.limit == null || isNaN(req.query.limit)) {
+		req.query.limit = 9;
+	}
+
+	if (req.query.search == null || req.query.search.trim() == '') {
+		req.query.search = '';
+	}
+
+	const products = await productController.getAll(req.query);
+	const count = products.length;
+
+	res.status(200).render('category', {
+		query: req.query,
+		categories,
+		brands,
+		colors,
+		trendingProducts,
 		products,
-		numberItems: limit,
-		lastPage,
-		currentPage: page,
-		selectedSort,
+		banner: 'Shop Category',
+		bannerPage: 'Shop Category',
+		totalPages: Math.ceil(count / req.query.limit),
+		current: req.query.page,
 	});
 });
 
@@ -72,9 +91,10 @@ module.exports.getDetailProduct = catchAsync(async (req, res, next) => {
 		return next(new AppError('Not product found with that ID', 404));
 	}
 
-	res.status(200).render('product-detail', {
-		title: 'Detail Product',
+	res.status(200).render('single-product', {
 		product,
+		bannerPage: 'Shop Single',
+		banner: 'Shop Single',
 	});
 });
 

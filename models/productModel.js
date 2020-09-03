@@ -8,6 +8,7 @@ const productSchema = new mongoose.Schema(
 		name: {
 			type: String,
 			trim: true,
+			text: true,
 			required: [true, 'A shoes must have a name'],
 			unique: true,
 			maxlength: [50, 'A shoes name must have less or equal than 50 characters'],
@@ -39,9 +40,22 @@ const productSchema = new mongoose.Schema(
 			required: [true, 'A shoes must have a image cover'],
 		},
 		brand: {
-			type: String,
-			default: 'Nike',
+			type: Number,
+			ref: 'Brand',
+			required: [true, 'Product must belong to a brand'],
 		},
+		category: {
+			type: Number,
+			ref: 'Category',
+			required: [true, 'Product must belong to a category'],
+		},
+		color: [
+			{
+				type: Number,
+				ref: 'Category',
+				required: [true],
+			},
+		],
 		images: [String],
 	},
 	{
@@ -50,8 +64,30 @@ const productSchema = new mongoose.Schema(
 	}
 );
 
+productSchema.index({ name: 'text' });
+// productSchema.index({ '$**': 'text' });
+
 productSchema.pre('save', function (next) {
 	this.slug = slugify(this.name, { lower: true });
+	next();
+});
+
+productSchema.pre(/^find/, function (next) {
+	this.populate({
+		path: 'brand',
+		select: 'name',
+	});
+
+	this.populate({
+		path: 'category:',
+		select: 'name',
+	});
+
+	this.populate({
+		path: 'color',
+		select: 'name',
+	});
+
 	next();
 });
 

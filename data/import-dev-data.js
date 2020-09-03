@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const Product = require('./../models/productModel');
 const User = require('./../models/userModel');
+const Brand = require('../models/brandModel.js');
+const Color = require('../models/colorModel');
+const Category = require('../models/categoryModel');
 
 dotenv.config({ path: './config.env' });
 
@@ -19,14 +22,20 @@ mongoose
 	.then(() => console.log('DB connection successful!'));
 
 // READ JSON FILE
-const products = JSON.parse(fs.readFileSync(`${__dirname}/products-f.json`, 'utf-8'));
+const categories = JSON.parse(fs.readFileSync(`${__dirname}/categories.json`, 'utf-8'));
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
+const brands = JSON.parse(fs.readFileSync(`${__dirname}/brands.json`, 'utf-8'));
+const colors = JSON.parse(fs.readFileSync(`${__dirname}/colors.json`, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(`${__dirname}/products-f.json`, 'utf-8'));
 
 // IMPORT DATA INTO DB
 const importData = async () => {
 	try {
-		await Product.create(products);
 		await User.create(users, { validateBeforeSave: false });
+		await Brand.create(brands);
+		await Color.create(colors);
+		await Category.create(categories);
+		await Product.create(products);
 		console.log('Data successfully loaded!');
 	} catch (err) {
 		console.log(err);
@@ -39,6 +48,9 @@ const deleteData = async () => {
 	try {
 		await Product.deleteMany();
 		await User.deleteMany();
+		await Brand.deleteMany();
+		await Color.deleteMany();
+		await Category.deleteMany();
 		console.log('Data successfully deleted!');
 	} catch (err) {
 		console.log(err);
