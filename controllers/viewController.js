@@ -69,7 +69,7 @@ module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 
 	const products = await productController.getAll(req.query);
 	const count = await productController.countProducts(req.query);
-	console.log(count);
+	console.log(req.query.search);
 
 	res.status(200).render('category', {
 		query: req.query,

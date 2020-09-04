@@ -82,13 +82,14 @@
             </select>
           </div>
           <div>
-            <form action="/products" method="GET">
+            <form action="/products" method="get">
               <div class=" input-group filter-bar-search">
-                <input id="search" type="text" placeholder="Search" name="search">
+                <input type="text" name="search" placeholder="Search">
                 <div class="input-group-append">
                   <button type="submit"><i class="ti-search"></i></button>
                 </div>
               </div>
+            </form>
           </div>
         </div>
         <!-- End Filter Bar -->
@@ -263,11 +264,11 @@
 
   let params = {
     category: 0,
+    search: '',
     color: 0,
     brand: 0,
     min: 0,
     sort: 'name',
-    search: '',
     max: 150,
     limit: 9,
     page: 1
@@ -280,7 +281,6 @@
   }
 
   $(document).ready(() => {
-
     let checkboxes = ['category', 'color', 'brand'];
     for (let key of checkboxes) {
       let control = $(`#${key}${urlParams.get(key)}`);
@@ -291,6 +291,7 @@
 
     $('#sort').val(urlParams.get('sort'));
     $('#limit').val(urlParams.get('limit'));
+    $('#search').val(urlParams.get('search'))
 
     $('#pagination li').addClass('page-item');
     $('#pagination li a').addClass('page-link');
@@ -303,7 +304,6 @@
     });
     urlParams.set('page', savePage);
   });
-
 
   function selectParam(key, value, reset = false) {
     if (reset) {
