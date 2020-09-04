@@ -68,7 +68,8 @@ module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 	}
 
 	const products = await productController.getAll(req.query);
-	const count = products.length;
+	const count = await productController.countProducts(req.query);
+	console.log(count);
 
 	res.status(200).render('category', {
 		query: req.query,
@@ -81,6 +82,11 @@ module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 		bannerPage: 'Shop Category',
 		totalPages: Math.ceil(count / req.query.limit),
 		current: req.query.page,
+		pagination: {
+			page: parseInt(req.query.page),
+			limit: parseInt(req.query.limit),
+			totalRows: parseInt(count),
+		},
 	});
 });
 

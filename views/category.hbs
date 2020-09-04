@@ -1,3 +1,4 @@
+<script src="/vendors/nouislider/nouislider.min.js"></script>
 {{> banner}}
 
 <!-- ================ category section start ================= -->
@@ -11,20 +12,11 @@
             <li class="common-filter">
               <form action="#">
                 <ul>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="men" name="brand"><label
-                      for="men">Men<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="women" name="brand"><label
-                      for="women">Women<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="accessories" name="brand"><label
-                      for="accessories">Accessories<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="footwear" name="brand"><label
-                      for="footwear">Footwear<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="bayItem" name="brand"><label
-                      for="bayItem">Bay item<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="electronics" name="brand"><label
-                      for="electronics">Electronics<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="food" name="brand"><label
-                      for="food">Food<span> (3600)</span></label></li>
+                  {{#each categories}}
+                  <li class="filter-list"><input class="pixel-radio" type="radio" id="category{{this._id}}"
+                      name="category" onclick="selectParam('category', {{this._id}}, true)"><label
+                      for="category{{this._id}}">{{this.name}}<span></span></label></li>
+                  {{/each}}
                 </ul>
               </form>
             </li>
@@ -36,16 +28,11 @@
             <div class="head">Brands</div>
             <form action="#">
               <ul>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label
-                    for="apple">Apple<span>(29)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label
-                    for="asus">Asus<span>(29)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label
-                    for="gionee">Gionee<span>(19)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label
-                    for="micromax">Micromax<span>(19)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label
-                    for="samsung">Samsung<span>(19)</span></label></li>
+                {{#each brands}}
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="brand{{this._id}}" name="brand"
+                    onclick="selectParam('brand', {{this._id}})"><label
+                    for="brand{{this._id}}">{{this.name}}<span></span></label></li>
+                {{/each}}
               </ul>
             </form>
           </div>
@@ -53,18 +40,11 @@
             <div class="head">Color</div>
             <form action="#">
               <ul>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label
-                    for="black">Black<span>(29)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label
-                    for="balckleather">Black
-                    Leather<span>(29)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label
-                    for="blackred">Black
-                    with red<span>(19)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label
-                    for="gold">Gold<span>(19)</span></label></li>
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label
-                    for="spacegrey">Spacegrey<span>(19)</span></label></li>
+                {{#each colors}}
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="color{{this._id}}" name="color"
+                    onclick="selectParam('color', {{this._id}})"><label
+                    for="color{{this._id}}">{{this.name}}<span></span></label></li>
+                {{/each}}
               </ul>
             </form>
           </div>
@@ -88,26 +68,27 @@
         <!-- Start Filter Bar -->
         <div class="filter-bar d-flex flex-wrap align-items-center">
           <div class="sorting">
-            <select>
-              <option value="1">Default sorting</option>
-              <option value="1">Default sorting</option>
-              <option value="1">Default sorting</option>
+            <select id="sort" onchange="selectParam('sort', this.value)">
+              <option value="name">Sorting by name</option>
+              <option value="price">Sorting by price</option>
+              <option value="overalReview">Sorting by rating</option>
             </select>
           </div>
           <div class="sorting mr-auto">
-            <select>
-              <option value="1">Show 12</option>
-              <option value="1">Show 12</option>
-              <option value="1">Show 12</option>
+            <select id="limit" onchange="selectParam('limit', this.value)">
+              <option value="9">Show 9</option>
+              <option value="12">Show 12</option>
+              <option value="15">Show 15</option>
             </select>
           </div>
           <div>
-            <div class="input-group filter-bar-search">
-              <input type="text" placeholder="Search">
-              <div class="input-group-append">
-                <button type="button"><i class="ti-search"></i></button>
+            <form action="/products" method="GET">
+              <div class=" input-group filter-bar-search">
+                <input id="search" type="text" placeholder="Search" name="search">
+                <div class="input-group-append">
+                  <button type="submit"><i class="ti-search"></i></button>
+                </div>
               </div>
-            </div>
           </div>
         </div>
         <!-- End Filter Bar -->
@@ -119,6 +100,11 @@
               {{> product}}
             </div>
             {{/each}}
+          </div>
+          <div class="row justify-content-center">
+            <nav aria-label="Page navigation example" id="pagination">
+              {{{createPagination pagination paginationClass="pagination"}}}
+            </nav>
           </div>
         </section>
         <!-- End Best Seller -->
@@ -271,3 +257,63 @@
   </div>
 </section>
 <!-- ================ Subscribe section end ================= -->
+
+<script>
+  let urlParams = new URLSearchParams(location.search);
+
+  let params = {
+    category: 0,
+    color: 0,
+    brand: 0,
+    min: 0,
+    sort: 'name',
+    search: '',
+    max: 150,
+    limit: 9,
+    page: 1
+  };
+
+  for (let key in params) {
+    if (!urlParams.has(key)) {
+      urlParams.append(key, params[key]);
+    }
+  }
+
+  $(document).ready(() => {
+
+    let checkboxes = ['category', 'color', 'brand'];
+    for (let key of checkboxes) {
+      let control = $(`#${key}${urlParams.get(key)}`);
+      if (control) {
+        $(control).prop('checked', true);
+      }
+    }
+
+    $('#sort').val(urlParams.get('sort'));
+    $('#limit').val(urlParams.get('limit'));
+
+    $('#pagination li').addClass('page-item');
+    $('#pagination li a').addClass('page-link');
+    let savePage = urlParams.get('page');
+    $('#pagination li a').each((index, ele) => {
+      let page = $(ele).attr('href').split('=')[1];
+      urlParams.set('page', page);
+      let href = '/products?' + urlParams.toString();
+      $(ele).attr('href', href);
+    });
+    urlParams.set('page', savePage);
+  });
+
+
+  function selectParam(key, value, reset = false) {
+    if (reset) {
+      for (let key in params) {
+        urlParams.set(key, params[key]);
+      }
+    }
+    urlParams.set(key, value);
+    var url = `/products?${urlParams.toString()}`;
+    location.href = url;
+  }
+
+</script>

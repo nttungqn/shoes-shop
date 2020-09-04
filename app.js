@@ -10,6 +10,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const Handlebars = require('handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
+const paginate = require('express-handlebars-paginate');
 
 const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
@@ -30,6 +31,9 @@ const hbs = expressHandlebars.create({
 	layoutsDir: __dirname + '/views/layouts',
 	partialsDir: __dirname + '/views/partials',
 	handlebars: allowInsecurePrototypeAccess(Handlebars),
+	helpers: {
+		createPagination: paginate.createPagination,
+	},
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');

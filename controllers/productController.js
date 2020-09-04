@@ -104,6 +104,38 @@ module.exports.getAll = (query) => {
 	});
 };
 
+module.exports.countProducts = (query) => {
+	return new Promise((resolve, reject) => {
+		let options = {
+			price: {
+				$gte: query.min,
+				$lte: query.max,
+			},
+			name: {
+				$regex: query.search,
+			},
+		};
+
+		if (query.category > 0) {
+			options.category = query.category;
+		}
+
+		if (query.color > 0) {
+			options.color = query.color;
+		}
+
+		if (query.brand > 0) {
+			options.brand = query.brand;
+		}
+
+		Product.countDocuments(options)
+			.then((data) => {
+				resolve(data);
+			})
+			.catch((err) => reject(new AppError(err.message, 404)));
+	});
+};
+
 module.exports.getProductById = async (id) => {
 	return await Product.findById(id);
 };
