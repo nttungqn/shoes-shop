@@ -136,6 +136,12 @@ module.exports.countProducts = (query) => {
 	});
 };
 
-module.exports.getProductById = async (id) => {
-	return await Product.findById(id);
+module.exports.getProductById = (id) => {
+	return new Promise((resolve, reject) => {
+		Product.findById(id)
+			.then((data) => {
+				resolve(data);
+			})
+			.catch((err) => reject(new Error(err)));
+	});
 };
