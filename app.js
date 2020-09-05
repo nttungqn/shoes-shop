@@ -63,13 +63,16 @@ app.use((req, res, next) => {
 	var cart = new Cart(req.session.cart ? req.session.cart : {});
 	req.session.cart = cart;
 	res.locals.totalQuantity = cart.totalQuantity;
+
+	res.locals.fullname = req.session.user ? req.session.user.fullname : '';
+	res.locals.isLoggedIn = req.session.user ? true : false;
 	next();
 });
 
 app.use('/', viewRouter);
 app.use('/cart', cartRouter);
 app.use('/api/products/', productRouter);
-app.use('/api/users/', userRouter);
+app.use('/users/', userRouter);
 
 app.all('*', (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

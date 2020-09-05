@@ -31,7 +31,6 @@ const products = JSON.parse(fs.readFileSync(`${__dirname}/products-f.json`, 'utf
 // IMPORT DATA INTO DB
 const importData = async () => {
 	try {
-		await User.create(users, { validateBeforeSave: false });
 		await Brand.create(brands);
 		await Color.create(colors);
 		await Category.create(categories);
@@ -46,8 +45,8 @@ const importData = async () => {
 // DELETE ALL DATA FROM DB
 const deleteData = async () => {
 	try {
-		await Product.deleteMany();
 		await User.deleteMany();
+		await Product.deleteMany();
 		await Brand.deleteMany();
 		await Color.deleteMany();
 		await Category.deleteMany();

@@ -32,7 +32,11 @@ function removeCardItem(id) {
 		success: function (result) {
 			$('#cart-badge').html(result.totalQuantity);
 			$('#totalPrice').html('$' + result.totalPrice);
-			$(`#item${id}`).remove();
+			if (result.totalQuantity > 0) {
+				$(`#item${id}`).remove();
+			} else {
+				$('#cart-body').html('<div class="alert alert-info text-center">Your cart is empty</div>');
+			}
 		},
 	});
 }
@@ -46,6 +50,17 @@ function updateCartItem(id, quantity) {
 			$('#cart-badge').html(result.totalQuantity);
 			$('#totalPrice').html('$' + result.totalPrice);
 			$(`#price${id}`).html('$' + result.item.price);
+		},
+	});
+}
+
+function clearCart() {
+	$.ajax({
+		url: '/cart/all',
+		type: 'DELETE',
+		success: function (result) {
+			$('#cart-badge').html('0');
+			$('#cart-body').html('<div class="alert alert-info text-center">Your cart is empty</div>');
 		},
 	});
 }
