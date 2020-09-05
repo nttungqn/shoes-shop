@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
 	var cart = req.session.cart;
 	res.locals.cart = cart.getCart();
-	console.log(cart.getCart());
+	// console.log(cart.getCart());
 	res.render('cart', {
 		bannerPage: 'Cart',
 		banner: 'Cart',
@@ -23,7 +23,7 @@ router.post('/', (req, res, next) => {
 		.getProductById(productId)
 		.then((product) => {
 			var cartItem = req.session.cart.add(product, productId, quantity);
-			console.log(cartItem);
+			// console.log(cartItem);
 			res.json(cartItem);
 		})
 		.catch((err) => next(err));

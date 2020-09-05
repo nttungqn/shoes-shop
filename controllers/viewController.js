@@ -69,7 +69,10 @@ module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 
 	const products = await productController.getAll(req.query);
 	const count = await productController.countProducts(req.query);
-	console.log(req.query.search);
+	const topProduct1 = await productController.getTopProducts(3, 0);
+	const topProduct2 = await productController.getTopProducts(3, 3);
+	const topProduct3 = await productController.getTopProducts(3, 6);
+	const topProduct4 = await productController.getTopProducts(3, 9);
 
 	res.status(200).render('category', {
 		query: req.query,
@@ -87,6 +90,10 @@ module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 			limit: parseInt(req.query.limit),
 			totalRows: parseInt(count),
 		},
+		topProduct1,
+		topProduct2,
+		topProduct3,
+		topProduct4,
 	});
 });
 
@@ -97,27 +104,18 @@ module.exports.getDetailProduct = catchAsync(async (req, res, next) => {
 		return next(new AppError('Not product found with that ID', 404));
 	}
 
+	const topProduct1 = await productController.getTopProducts(3, 0);
+	const topProduct2 = await productController.getTopProducts(3, 3);
+	const topProduct3 = await productController.getTopProducts(3, 6);
+	const topProduct4 = await productController.getTopProducts(3, 9);
+
 	res.status(200).render('single-product', {
 		product,
 		bannerPage: 'Shop Single',
 		banner: 'Shop Single',
-	});
-});
-
-module.exports.getLoginForm = catchAsync(async (req, res, next) => {
-	res.status(200).render('login', {
-		title: 'Login',
-	});
-});
-
-module.exports.getRegisterForm = catchAsync(async (req, res, next) => {
-	res.status(200).render('register', {
-		title: 'Register',
-	});
-});
-
-module.exports.getForgotPasswordForm = catchAsync(async (req, res, next) => {
-	res.status(200).render('forgot-password', {
-		title: 'Forgot Password',
+		topProduct1,
+		topProduct2,
+		topProduct3,
+		topProduct4,
 	});
 });

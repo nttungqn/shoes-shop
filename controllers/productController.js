@@ -4,13 +4,25 @@ const Product = require('./../models/productModel');
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 
-
 module.exports.getTrendingProduct = (numItems) => {
 	// treding products
 	return new Promise((resolve, reject) => {
 		Product.find()
 			.sort({ ratingsAverage: 'desc' })
 			.limit(numItems)
+			.then((data) => {
+				resolve(data);
+			})
+			.catch((err) => reject(new Error(err)));
+	});
+};
+
+module.exports.getTopProducts = (numItems, skip) => {
+	return new Promise((resolve, reject) => {
+		Product.find()
+			.sort({ ratingsAverage: 'desc' })
+			.limit(numItems)
+			.skip(skip)
 			.then((data) => {
 				resolve(data);
 			})
