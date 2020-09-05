@@ -32,7 +32,7 @@
 		<div class="owl-carousel owl-theme hero-carousel">
 			{{#each categories}}
 			<div class="hero-carousel__slide">
-				<img src="/img/category/category_1.jpg" alt="" class="img-fluid" />
+				<img src="/img/category/category_{{this._id}}.jpg" alt="" class="img-fluid" />
 				<a href="/products?category={{this._id}}" class="hero-carousel__slideOverlay">
 					<h3>{{this.name}}</h3>
 					<p>Accessories Item</p>
