@@ -5,6 +5,9 @@ const slugify = require('slugify');
 
 const productSchema = new mongoose.Schema(
 	{
+		_id: {
+			type: Number,
+		},
 		name: {
 			type: String,
 			trim: true,
@@ -34,7 +37,10 @@ const productSchema = new mongoose.Schema(
 			type: Number,
 			required: [true, 'A shoes must have a price'],
 		},
-		description: [String],
+		description: {
+			type: String,
+		},
+		summary: { type: String },
 		imageCover: {
 			type: String,
 			required: [true, 'A shoes must have a image cover'],

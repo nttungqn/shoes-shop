@@ -8,6 +8,7 @@ const User = require('./../models/userModel');
 const Brand = require('../models/brandModel.js');
 const Color = require('../models/colorModel');
 const Category = require('../models/categoryModel');
+const bcrypt = require('bcryptjs');
 
 dotenv.config({ path: './config.env' });
 
@@ -26,7 +27,7 @@ const categories = JSON.parse(fs.readFileSync(`${__dirname}/categories.json`, 'u
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
 const brands = JSON.parse(fs.readFileSync(`${__dirname}/brands.json`, 'utf-8'));
 const colors = JSON.parse(fs.readFileSync(`${__dirname}/colors.json`, 'utf-8'));
-const products = JSON.parse(fs.readFileSync(`${__dirname}/products-f.json`, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(`${__dirname}/products.json`, 'utf-8'));
 
 // IMPORT DATA INTO DB
 const importData = async () => {
@@ -35,6 +36,13 @@ const importData = async () => {
 		await Color.create(colors);
 		await Category.create(categories);
 		await Product.create(products);
+		let password = 'user123';
+		for (let i in users) {
+			let salt = await bcrypt.genSalt(10);
+			let hashedPassword = await bcrypt.hash(password, salt);
+			users[i].password = hashedPassword;
+		}
+		await User.create(users);
 		console.log('Data successfully loaded!');
 	} catch (err) {
 		console.log(err);
