@@ -9,7 +9,10 @@ router.get('/', (req, res) => {
 	var cart = req.session.cart;
 	res.locals.cart = cart.getCart();
 	console.log(cart.getCart());
-	res.render('cart');
+	res.render('cart', {
+		bannerPage: 'Cart',
+		banner: 'Cart',
+	});
 });
 
 router.post('/', (req, res, next) => {

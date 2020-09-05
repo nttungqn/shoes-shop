@@ -103,14 +103,12 @@
                                     </ul>
                                     <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
                                     <select class="shipping_select">
-                                        <option value="1">Bangladesh</option>
-                                        <option value="2">India</option>
-                                        <option value="4">Pakistan</option>
+                                        <option value="1">Vietnam</option>
                                     </select>
                                     <select class="shipping_select">
-                                        <option value="1">Select a State</option>
-                                        <option value="2">Select a State</option>
-                                        <option value="4">Select a State</option>
+                                        <option value="1">Ho Chi Minh</option>
+                                        <option value="2">Ha Noi</option>
+                                        <option value="4">Da Nang</option>
                                     </select>
                                     <input type="text" placeholder="Postcode/Zipcode">
                                     <a class="gray_btn" href="#">Update Details</a>
@@ -118,21 +116,19 @@
                             </td>
                         </tr>
                         <tr class="out_button_area">
-                            <td class="d-none-l">
-
-                            </td>
-                            <td class="">
-
-                            </td>
+                            <td></td>
                             <td>
-
-                            </td>
-                            <td>
-                                <div class="checkout_btn_inner d-flex align-items-center">
-                                    <a class="gray_btn" href="#">Continue Shopping</a>
-                                    <a class="primary-btn ml-2" href="#">Proceed to checkout</a>
+                                <div class="checkout_btn_inner d-flex align-items-center ">
+                                    <a class="gray_btn" href="/products" style="margin-right:100px">Continue
+                                        Shopping</a>
+                                    {{#if isLoggedIn}}
+                                    <a class="primary-btn ml-2" href="/confirmation">Proceed to checkout</a>
+                                    {{else}}
+                                    <a class="primary-btn ml-2" href="/users/login">Login to checkout</a>
+                                    {{/if}}
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>

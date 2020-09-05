@@ -13,7 +13,6 @@ const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-ac
 const paginate = require('express-handlebars-paginate');
 
 const userRouter = require('./routes/userRoutes');
-const productRouter = require('./routes/productRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const Cart = require('./controllers/cartController');
 const cartRouter = require('./routes/cartRoutes');
@@ -71,7 +70,6 @@ app.use((req, res, next) => {
 
 app.use('/', viewRouter);
 app.use('/cart', cartRouter);
-app.use('/api/products/', productRouter);
 app.use('/users/', userRouter);
 
 app.all('*', (req, res, next) => {

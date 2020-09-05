@@ -1,19 +1,9 @@
 /** @format */
 
 const Product = require('./../models/productModel');
-const factoryHandler = require('./FactoryHandler');
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 
-module.exports.getAllProduct = factoryHandler.getAll(Product);
-
-module.exports.createProduct = factoryHandler.createOne(Product);
-
-module.exports.getProduct = factoryHandler.getOne(Product);
-
-module.exports.updateProduct = factoryHandler.updateOne(Product);
-
-module.exports.deleteProduct = factoryHandler.deleteOne(Product);
 
 module.exports.getTrendingProduct = (numItems) => {
 	// treding products

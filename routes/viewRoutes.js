@@ -10,10 +10,12 @@ router.get('/products', viewController.getShopCategory);
 
 router.get('/products/:slug', viewController.getDetailProduct);
 
-router.get('/login', viewController.getLoginForm);
-
-router.get('/forgot-password', viewController.getForgotPasswordForm);
-
-router.get('/register', viewController.getRegisterForm);
+router.get('/confirmation', (req, res) => {
+	res,
+		res.render('confirmation', {
+			banner: 'Order Confirmation',
+			bannerPage: 'Order Confirmation',
+		});
+});
 
 module.exports = router;
