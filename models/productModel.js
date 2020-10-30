@@ -11,9 +11,7 @@ const productSchema = new mongoose.Schema(
 		name: {
 			type: String,
 			trim: true,
-			text: true,
 			required: [true, 'A shoes must have a name'],
-			unique: true,
 			maxlength: [50, 'A shoes name must have less or equal than 50 characters'],
 			minlength: [3, 'A shoes name must have more or equal than 6 characters'],
 		},
@@ -69,9 +67,6 @@ const productSchema = new mongoose.Schema(
 		toObject: { virtuals: true },
 	}
 );
-
-productSchema.index({ name: 'text' });
-// productSchema.index({ '$**': 'text' });
 
 productSchema.pre('save', function (next) {
 	this.slug = slugify(this.name, { lower: true });

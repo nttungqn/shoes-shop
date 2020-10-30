@@ -19,6 +19,7 @@ mongoose
 		useNewUrlParser: true,
 		useCreateIndex: true,
 		useFindAndModify: false,
+		useUnifiedTopology: true,
 	})
 	.then(() => console.log('DB connection successful!'));
 
@@ -27,22 +28,22 @@ const categories = JSON.parse(fs.readFileSync(`${__dirname}/categories.json`, 'u
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
 const brands = JSON.parse(fs.readFileSync(`${__dirname}/brands.json`, 'utf-8'));
 const colors = JSON.parse(fs.readFileSync(`${__dirname}/colors.json`, 'utf-8'));
-const products = JSON.parse(fs.readFileSync(`${__dirname}/products.json`, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(`${__dirname}/product.json`, 'utf-8'));
 
 // IMPORT DATA INTO DB
 const importData = async () => {
 	try {
-		await Brand.create(brands);
-		await Color.create(colors);
-		await Category.create(categories);
+		// await Brand.create(brands);
+		// await Color.create(colors);
+		// await Category.create(categories);
+		// let password = 'user123';
+		// for (let i in users) {
+		// 	let salt = await bcrypt.genSalt(10);
+		// 	let hashedPassword = await bcrypt.hash(password, salt);
+		// 	users[i].password = hashedPassword;
+		// }
+		// await User.create(users);
 		await Product.create(products);
-		let password = 'user123';
-		for (let i in users) {
-			let salt = await bcrypt.genSalt(10);
-			let hashedPassword = await bcrypt.hash(password, salt);
-			users[i].password = hashedPassword;
-		}
-		await User.create(users);
 		console.log('Data successfully loaded!');
 	} catch (err) {
 		console.log(err);
@@ -53,11 +54,11 @@ const importData = async () => {
 // DELETE ALL DATA FROM DB
 const deleteData = async () => {
 	try {
-		await User.deleteMany();
+		// await User.deleteMany();
+		// await Brand.deleteMany();
+		// await Color.deleteMany();
+		// await Category.deleteMany();
 		await Product.deleteMany();
-		await Brand.deleteMany();
-		await Color.deleteMany();
-		await Category.deleteMany();
 		console.log('Data successfully deleted!');
 	} catch (err) {
 		console.log(err);
@@ -69,4 +70,7 @@ if (process.argv[2] === '--import') {
 	importData();
 } else if (process.argv[2] === '--delete') {
 	deleteData();
+} else if(process.argv[2] === '--restart'){
+	deleteData();
+	importData();
 }
