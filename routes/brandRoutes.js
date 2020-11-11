@@ -3,6 +3,6 @@ const brandController = require('./../controllers/brandController')
 
 const route = express.Router();
 
-route.get('/', brandController.getAllV2);
+route.get('/', brandController.getAll);
 
 module.exports = route;

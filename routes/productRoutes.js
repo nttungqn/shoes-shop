@@ -3,8 +3,8 @@ const productController = require('./../controllers/productController');
 const route = express.Router();
 
 route.get('/',productController.getAll)
-route.get('/:id', productController.getProductById)
-route.get('/trending-product', productController.getTrendingProduct)
+route.get('/trending-products', productController.getTrendingProduct)
 route.get('/top-products', productController.getTopProducts)
+route.get('/:id', productController.getProductById)
 
 module.exports = route;
