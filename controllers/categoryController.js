@@ -1,5 +1,3 @@
-/**  */
-
 const Category = require('../models/categoryModel');
 
 module.exports.getAll = (query) => {
