@@ -1,5 +1,5 @@
-/** @format */
-const catchAsync = require('./../utils/catchAsync');
+const axios = require('axios')
+
 const productController = require('./../controllers/productController');
 const brandController = require('./../controllers/brandController');
 const categoryController = require('./../controllers/categoryController');
@@ -8,6 +8,15 @@ const Product = require('./../models/productModel');
 const Brand = require('./../models/brandModel');
 const Color = require('./../models/colorModel');
 const Category = require('./../models/categoryModel');
+
+const catchAsync = require('./../utils/catchAsync');
+
+// init
+const instance = axios.create({
+	baseURL: 'http://localhost:5000/',
+	timeout: 1000,
+	headers: {'X-Custom-Header': 'foobar'}
+  });
 
 // 1) Get tour data from collection
 // 2) Build template
@@ -28,6 +37,11 @@ module.exports.getOverview = catchAsync(async (req, res, next) => {
 module.exports.getShopCategory = catchAsync(async (req, res, next) => {
 	const categories = await categoryController.getAll();
 	const brands = await brandController.getAll();
+	// const brands = await axios({
+	// 	method: 'GET',
+	// 	url: '/api/brands'
+	// });
+	
 	const trendingProducts = await productController.getTrendingProduct(12);
 	const colors = await Color.find();
 

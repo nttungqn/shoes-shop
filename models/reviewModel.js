@@ -1,4 +1,4 @@
-/** @format */
+/**  */
 
 // review / rating / createdAt / ref to shoes / ref to user
 const mongoose = require('mongoose');

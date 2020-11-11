@@ -1,5 +1,3 @@
-/** @format */
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -12,10 +10,12 @@ const Handlebars = require('handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 const paginate = require('express-handlebars-paginate');
 
+const productRouter = require('./routes/productRoutes')
 const userRouter = require('./routes/userRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const Cart = require('./controllers/cartController');
 const cartRouter = require('./routes/cartRoutes');
+const brandRouter = require('./routes/brandRoutes')
 const AppError = require('./utils/AppError');
 
 const app = express();
@@ -71,6 +71,8 @@ app.use((req, res, next) => {
 app.use('/', viewRouter);
 app.use('/cart', cartRouter);
 app.use('/users/', userRouter);
+app.use('/api/products', productRouter);
+app.use('/api/brands', brandRouter);
 
 app.all('*', (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
