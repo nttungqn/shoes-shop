@@ -4,10 +4,10 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "nodemon server.js",
+		"start": "node server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "Thanh Tung Nguyen",
+	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"@handlebars/allow-prototype-access": "^1.0.3",
@@ -18,16 +18,17 @@
 		"cookie-parser": "^1.4.5",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
-		"express-handlebars": "^5.2.0",
+		"express-handlebars": "^5.1.0",
 		"express-handlebars-paginate": "^1.0.3",
 		"express-session": "^1.17.1",
-		"handlebars": "^4.7.6",
-		"helmet": "^4.2.0",
-		"mongoose": "^5.10.13",
+		"mongoose": "^5.10.2",
 		"morgan": "^1.10.0",
-		"slugify": "^1.4.6"
+		"nodemon": "^2.0.4",
+		"passport": "^0.4.1",
+		"passport-local": "^1.0.0",
+		"pug": "^3.0.0",
+		"slugify": "^1.4.5",
+		"handlebars": "^4.7.6"
 	},
-	"devDependencies": {
-		"nodemon": "^2.0.6"
-	}
+	"devDependencies": {}
 }

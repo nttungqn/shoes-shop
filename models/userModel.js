@@ -1,6 +1,11 @@
+/** @format */
+
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
+	_id: {
+		type: Number,
+	},
 	fullname: {
 		type: String,
 		require: [true, 'Please provide a fullname'],

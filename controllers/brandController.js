@@ -1,13 +1,11 @@
 const Brand = require('../models/brandModel');
-const { HTTPStatusCode, MESSAGE } = require('../utils/base');
-const catchAsync = require('../utils/catchAsync');
 
-module.exports.getAll = catchAsync(async (req, res) => {
-	const records = await Brand.find();
-
-	if (records) return res.status(HTTPStatusCode.OK).json({ result: records });
-
-	return res.status(HTTPStatusCode.NOT_FOUND).json({
-		message: MESSAGE.RECORD_DOES_NOT_EXIST,
+module.exports.getAll = (query) => {
+	return new Promise((resolve, reject) => {
+		Brand.find(options)
+			.then((data) => {
+				resolve(data);
+			})
+			.catch((err) => reject(new Error(err)));
 	});
-});
+};

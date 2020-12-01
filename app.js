@@ -1,3 +1,5 @@
+/** @format */
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -9,26 +11,17 @@ const cookieParser = require('cookie-parser');
 const Handlebars = require('handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 const paginate = require('express-handlebars-paginate');
-const helmet = require('helmet');
 
-const productRouter = require('./routes/productRoutes')
 const userRouter = require('./routes/userRoutes');
 const viewRouter = require('./routes/viewRoutes');
-const cartRouter = require('./routes/cartRoutes');
-const brandRouter = require('./routes/brandRoutes');
-const categoryRouter = require('./routes/categoryRoutes.js');
 const Cart = require('./controllers/cartController');
+const cartRouter = require('./routes/cartRoutes');
 const AppError = require('./utils/AppError');
 
 const app = express();
 
-app.enable('trust proxy');
-
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Set security HTTP headers
-app.use(helmet());
 
 // set view engine
 const hbs = expressHandlebars.create({
@@ -77,10 +70,7 @@ app.use((req, res, next) => {
 
 app.use('/', viewRouter);
 app.use('/cart', cartRouter);
-app.use('/users', userRouter);
-app.use('/api/products', productRouter);
-app.use('/api/brands', brandRouter);
-app.use('/api/categories', categoryRouter);
+app.use('/users/', userRouter);
 
 app.all('*', (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

@@ -1,142 +1,121 @@
-// const axios = require('axios')
+/** @format */
+const catchAsync = require('./../utils/catchAsync');
+const productController = require('./../controllers/productController');
+const brandController = require('./../controllers/brandController');
+const categoryController = require('./../controllers/categoryController');
+const AppError = require('./../utils/AppError');
+const Product = require('./../models/productModel');
+const Brand = require('./../models/brandModel');
+const Color = require('./../models/colorModel');
+const Category = require('./../models/categoryModel');
 
-// const AppError = require('./../utils/AppError');
-// const Product = require('./../models/productModel');
-// const Brand = require('./../models/brandModel');
-// const Color = require('./../models/colorModel');
-// const Category = require('./../models/categoryModel');
+// 1) Get tour data from collection
+// 2) Build template
+// 3) Render that template using tour data from 1)
 
-// const catchAsync = require('./../utils/catchAsync');
+module.exports.getOverview = catchAsync(async (req, res, next) => {
+	const categories = await categoryController.getAll();
+	const trendingProducts = await productController.getTrendingProduct(8);
+	const bestSellerProducts = await productController.getBestSellerProduct(8);
 
-// // init
-// const instance = axios.create({
-// 	baseURL: 'http://localhost:5000/',
-// 	timeout: 1000,
-// 	headers: {'X-Custom-Header': 'foobar'}
-//   });
+	res.status(200).render('index', {
+		categories,
+		trendingProducts,
+		bestSellerProducts,
+	});
+});
 
-// // 1) Get tour data from collection
-// // 2) Build template
-// // 3) Render that template using tour data from 1)
+module.exports.getShopCategory = catchAsync(async (req, res, next) => {
+	const categories = await categoryController.getAll();
+	const brands = await brandController.getAll();
+	const trendingProducts = await productController.getTrendingProduct(12);
+	const colors = await Color.find();
 
-// module.exports.getOverview = catchAsync(async (req, res, next) => {
-// 	const categories = await axios({
-// 		method: 'GET',
-// 		url: '/api/categories'
-// 	});
-// 	const trendingProducts = await axios({
-// 		method: 'GET',
-// 		url: '/api/products/trending-products',
-// 		body: {
-// 			numItems: 8
-// 		}
-// 	})
-// 	productController.getTrendingProduct(8);
-// 	const bestSellerProducts = await productController.getBestSellerProduct(8);
+	if (req.query.color == null || isNaN(req.query.color)) {
+		req.query.color = 0;
+	}
 
-// 	res.status(200).render('index', {
-// 		categories,
-// 		trendingProducts,
-// 		bestSellerProducts,
-// 	});
-// });
+	if (req.query.brand == null || isNaN(req.query.brand)) {
+		req.query.brand = 0;
+	}
 
-// module.exports.getShopCategory = catchAsync(async (req, res, next) => {
-// 	const categories = await categoryController.getAll();
+	if (req.query.category == null || isNaN(req.query.category)) {
+		req.query.category = 0;
+	}
 
-// 	const brands = await axios({
-// 		method: 'GET',
-// 		url: '/api/brands'
-// 	});
-	
-// 	const trendingProducts = await productController.getTrendingProduct(12);
-// 	const colors = await Color.find();
+	if (req.query.min == null || isNaN(req.query.min)) {
+		req.query.min = 0;
+	}
 
-// 	if (req.query.color == null || isNaN(req.query.color)) {
-// 		req.query.color = 0;
-// 	}
+	if (req.query.max == null || isNaN(req.query.max)) {
+		req.query.max = 150;
+	}
 
-// 	if (req.query.brand == null || isNaN(req.query.brand)) {
-// 		req.query.brand = 0;
-// 	}
+	if (req.query.sort == null) {
+		req.query.sort = 'name';
+	}
 
-// 	if (req.query.category == null || isNaN(req.query.category)) {
-// 		req.query.category = 0;
-// 	}
+	if (req.query.page == null || isNaN(req.query.page)) {
+		req.query.page = 1;
+	}
 
-// 	if (req.query.min == null || isNaN(req.query.min)) {
-// 		req.query.min = 0;
-// 	}
+	if (req.query.limit == null || isNaN(req.query.limit)) {
+		req.query.limit = 9;
+	}
 
-// 	if (req.query.max == null || isNaN(req.query.max)) {
-// 		req.query.max = 150;
-// 	}
+	if (req.query.search == null || req.query.search.trim() == '') {
+		req.query.search = '';
+	}
 
-// 	if (req.query.sort == null) {
-// 		req.query.sort = 'name';
-// 	}
+	const products = await productController.getAll(req.query);
+	const count = await productController.countProducts(req.query);
+	const topProduct1 = await productController.getTopProducts(3, 0);
+	const topProduct2 = await productController.getTopProducts(3, 3);
+	const topProduct3 = await productController.getTopProducts(3, 6);
+	const topProduct4 = await productController.getTopProducts(3, 9);
 
-// 	if (req.query.page == null || isNaN(req.query.page)) {
-// 		req.query.page = 1;
-// 	}
+	res.status(200).render('category', {
+		query: req.query,
+		categories,
+		brands,
+		colors,
+		trendingProducts,
+		products,
+		banner: 'Shop Category',
+		bannerPage: 'Shop Category',
+		totalPages: Math.ceil(count / req.query.limit),
+		current: req.query.page,
+		pagination: {
+			page: parseInt(req.query.page),
+			limit: parseInt(req.query.limit),
+			totalRows: parseInt(count),
+		},
+		topProduct1,
+		topProduct2,
+		topProduct3,
+		topProduct4,
+	});
+});
 
-// 	if (req.query.limit == null || isNaN(req.query.limit)) {
-// 		req.query.limit = 9;
-// 	}
+module.exports.getDetailProduct = catchAsync(async (req, res, next) => {
+	const product = await Product.findOne({ slug: req.params.slug });
 
-// 	if (req.query.search == null || req.query.search.trim() == '') {
-// 		req.query.search = '';
-// 	}
+	if (!product) {
+		return next(new AppError('Not product found with that ID', 404));
+	}
 
-// 	const products = await productController.getAll(req.query);
-// 	const count = await productController.countProducts(req.query);
-// 	const topProduct1 = await productController.getTopProducts(3, 0);
-// 	const topProduct2 = await productController.getTopProducts(3, 3);
-// 	const topProduct3 = await productController.getTopProducts(3, 6);
-// 	const topProduct4 = await productController.getTopProducts(3, 9);
+	const topProduct1 = await productController.getTopProducts(3, 0);
+	const topProduct2 = await productController.getTopProducts(3, 3);
+	const topProduct3 = await productController.getTopProducts(3, 6);
+	const topProduct4 = await productController.getTopProducts(3, 9);
 
-// 	res.status(200).render('category', {
-// 		query: req.query,
-// 		categories,
-// 		brands,
-// 		colors,
-// 		trendingProducts,
-// 		products,
-// 		banner: 'Shop Category',
-// 		bannerPage: 'Shop Category',
-// 		totalPages: Math.ceil(count / req.query.limit),
-// 		current: req.query.page,
-// 		pagination: {
-// 			page: parseInt(req.query.page),
-// 			limit: parseInt(req.query.limit),
-// 			totalRows: parseInt(count),
-// 		},
-// 		topProduct1,
-// 		topProduct2,
-// 		topProduct3,
-// 		topProduct4,
-// 	});
-// });
-
-// module.exports.getDetailProduct = catchAsync(async (req, res, next) => {
-// 	const product = await Product.findOne({ slug: req.params.slug });
-
-// 	if (!product) {
-// 		return next(new AppError('Not product found with that ID', 404));
-// 	}
-
-// 	const topProduct1 = await productController.getTopProducts(3, 0);
-// 	const topProduct2 = await productController.getTopProducts(3, 3);
-// 	const topProduct3 = await productController.getTopProducts(3, 6);
-// 	const topProduct4 = await productController.getTopProducts(3, 9);
-
-// 	res.status(200).render('single-product', {
-// 		product,
-// 		bannerPage: 'Shop Single',
-// 		banner: 'Shop Single',
-// 		topProduct1,
-// 		topProduct2,
-// 		topProduct3,
-// 		topProduct4,
-// 	});
-// });
+	res.status(200).render('single-product', {
+		product,
+		bannerPage: 'Shop Single',
+		banner: 'Shop Single',
+		topProduct1,
+		topProduct2,
+		topProduct3,
+		topProduct4,
+	});
+});

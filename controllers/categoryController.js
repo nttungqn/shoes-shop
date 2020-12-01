@@ -1,12 +1,13 @@
 const Category = require('../models/categoryModel');
-const { HTTPStatusCode, MESSAGE } = require('../utils/base');
-const catchAsync = require('../utils/catchAsync');
 
-module.exports.getAll = catchAsync(async (req, res) => {
-	const records = await Category.find();
+module.exports.getAll = (query) => {
+	return new Promise((resolve, reject) => {
+		let options = {};
 
-	if (records) return res.status(HTTPStatusCode.OK).json({ result: records });
-	return res.status(HTTPStatusCode.NOT_FOUND).json({
-		message: MESSAGE.RECORD_DOES_NOT_EXIST,
+		Category.find(options)
+			.then((data) => {
+				resolve(data);
+			})
+			.catch((err) => reject(new Error(err)));
 	});
-});
+};
