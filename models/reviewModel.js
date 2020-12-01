@@ -20,12 +20,12 @@ const reviewSchema = new mongoose.Schema(
 			default: Date.now,
 		},
 		product: {
-			type: mongoose.Schema.ObjectId,
+			type: Integer,
 			ref: 'Product',
 			required: [true, 'Review must belong to a shoes.'],
 		},
 		user: {
-			type: mongoose.Schema.ObjectId,
+			type: Integer,
 			ref: 'User',
 			required: [true, 'Review must belong to a user'],
 		},

@@ -2,7 +2,7 @@ const Brand = require('../models/brandModel');
 
 module.exports.getAll = (query) => {
 	return new Promise((resolve, reject) => {
-		Brand.find(options)
+		Brand.find()
 			.then((data) => {
 				resolve(data);
 			})
